@@ -12,10 +12,6 @@
   font-style: normal;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .hero {
   position: relative;
   height: 100svh;
