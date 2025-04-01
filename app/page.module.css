@@ -15,7 +15,7 @@
 
 .hero {
   position: relative;
-  height: 100vh;
+  height: 100svh;
   background-image: url('../public/images/background.jpg');
   background-size: cover;
   background-position: center;
@@ -37,13 +37,13 @@
 }
   
   .title {
-    font-size: clamp(1rem, 15vw, 8rem);
+    font-size: clamp(0.5rem, 15vw, 8rem);
     margin-bottom: 2rem;
     font-family: 'TitleFont', sans-serif;
   }
 
   .titleStrong {
-    font-size: clamp(1rem, 15vw, 8rem);
+    font-size: clamp(0.5rem, 15vw, 8rem);
     margin-bottom: 2rem;
     font-family: 'TitleFont', sans-serif;
     font-weight: 700; /* texte en gras */
