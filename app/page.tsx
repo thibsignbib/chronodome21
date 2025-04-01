@@ -43,7 +43,7 @@ export default function Home() {
           </p>
         </div>
         <div className={styles.imageBlock}>
-          <img src="../public/images/logo_trisomie_21_pdd.png" alt="Mission" />
+          <img src="/images/logo_trisomie_21_pdd.png" alt="Mission" />
         </div>
       </div>
 
