@@ -49,20 +49,7 @@ export default function Home() {
       </div>
 
       <div className={`${styles.contentRow}`}>
-        <div className={styles.imageBlock}>
-          <img src="/images/june.png" alt="7 juin" />
-        </div>
-        <div className={styles.textBlock}>
-          <h1>La date</h1>
-          <br />
-          <p>
-            La Chronodôme 2.1 aura lieu le samedi 7 juin à partir de 19h et se terminera donc le dimanche 8 juin à 16h.
-          </p>
-        </div>
-      </div>
-
-      <div className={styles.contentRow}>
-        <div className={styles.textBlock}>
+      <div className={styles.textBlock}>
           <h1>Emplacement du parking et du départ de la boucle</h1>
           <p>
           Quand vous venez de Clermont depuis le col de ceyssat, continuez en direction de Ceyssat et jusqu'à une entrée de chemin signalée par des ballons et rubalises. Tournez sur votre droite, puis suivez la rubalise jusqu'au monument "des fusillés ardents".
@@ -70,8 +57,12 @@ export default function Home() {
           <a href="https://www.google.com/maps/place/45%C2%B046'26.9%22N+2%C2%B056'11.5%22E/@45.7702757,2.9333126,14.72z/data=!4m4!3m3!8m2!3d45.774131!4d2.93653?entry=ttu&g_ep=EgoyMDI1MDMzMC4wIKXMDSoASAFQAw%3D%3D">Lien Google Maps</a>
           </p>
         </div>
-        <div className={styles.imageBlock}>
-          <img src="/images/map.png" alt="Map icon" />
+        <div className={styles.textBlock}>
+          <h1>La date</h1>
+          <br />
+          <p>
+            La Chronodôme 2.1 aura lieu le samedi 7 juin à partir de 19h et se terminera donc le dimanche 8 juin à 16h.
+          </p>
         </div>
       </div>
     </section>
