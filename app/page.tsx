@@ -6,9 +6,7 @@ export default function Home() {
   return (
   <main>
     <section className={styles.hero}>
-
-    <div className={styles.gradientOverlay} />
-
+      <div className={styles.overlay}>
         <h1 className={styles.title}>Chronodome 2.1</h1>
         <div className={styles.socials}>
           <a href="https://twitter.com" className={styles.button} target="_blank" rel="noopener noreferrer">
@@ -21,9 +19,9 @@ export default function Home() {
             <FaInstagram /> Suivez Arthur sur Instagram
           </a>
         </div>
-
-      <div className={styles.scrollHint}>
-          <BsChevronDown className={styles.arrow} />
+        <div className={styles.scrollHint}>
+            <BsChevronDown className={styles.arrow} />
+        </div>
       </div>
     </section>
     
