@@ -6,10 +6,17 @@ export default function Home() {
   return (
   <main>
     <section className={styles.hero}>
+      <div className={styles.slideshow}>
+        <div className={styles.slide + ' ' + styles.slide1}></div>
+        <div className={styles.slide + ' ' + styles.slide2}></div>
+        <div className={styles.slide + ' ' + styles.slide3}></div>
+        <div className={styles.slide + ' ' + styles.slide4}></div>
+        <div className={styles.slide + ' ' + styles.slide5}></div>
+      </div>
       <div className={styles.overlay}>
         <h1 className={styles.title}>Chronodome 2.1</h1>
         <div className={styles.socials}>
-          <a href="https://twitter.com" className={styles.button} target="_blank" rel="noopener noreferrer">
+          <a href="https://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" className={styles.button} target="_blank" rel="noopener noreferrer">
             <FaPlus /> S'inscrire à l'événement
           </a>
           <a href="https://pots.lydia.me/collect/pots?id=71624-chronodome-2-1&fbclid=IwZXh0bgNhZW0CMTAAAR0s0ZyZlPr_sNZA7milhHObpNjSjEUxTZ2KIT3oL" className={styles.button} target="_blank" rel="noopener noreferrer">
