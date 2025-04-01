@@ -188,7 +188,6 @@
   }
   
   .textBlock {
-    flex: 1 1 300px;
     max-width: 500px;
     padding: 1rem;
     text-align : justify;
