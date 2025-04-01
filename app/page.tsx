@@ -23,7 +23,7 @@ export default function Home() {
             <FaEuroSign /> Faire un don
           </a>
           <a href="https://www.instagram.com/semelle_o_monde/" className={styles.button} target="_blank" rel="noopener noreferrer">
-            <FaInstagram /> Suivez Arthur sur Instagram
+            <FaInstagram /> Les dernières news
           </a>
         </div>
       </div>
@@ -38,7 +38,7 @@ export default function Home() {
         <div className={styles.textBlock}>
           <h1>La Chronodome 2.1, c'est quoi ?</h1>
           <p>
-            La Chronodome 2.1 est la seconde édition d'un événement sportif caritatif au profit de l'association Trisomie 21 Puy de Dôme. Un parcours de 9,8 km est tracé pour l'occasion.<Br />
+            La Chronodome 2.1 est la seconde édition d'un événement sportif caritatif au profit de l'association Trisomie 21 Puy de Dôme. Un parcours de 9,8 km est tracé pour l'occasion.<br />
             L'événement dure symboliquement 21h mais chacun participe comme il ou elle le souhaite : vous pouvez venir faire 1 tour... ou 5O. En marchant, en courant, ou en VTT... Seule votre bonne humeur est indispensable !
           </p>
         </div>
