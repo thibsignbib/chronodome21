@@ -37,13 +37,13 @@
 }
   
   .title {
-    font-size: clamp(3rem, 20vw, 10rem);
+    font-size: clamp(2rem, 20vw, 10rem);
     margin-bottom: 2rem;
     font-family: 'TitleFont', sans-serif;
   }
 
   .titleStrong {
-    font-size: clamp(3rem, 20vw, 10rem);
+    font-size: clamp(2rem, 20vw, 10rem);
     margin-bottom: 2rem;
     font-family: 'TitleFont', sans-serif;
     font-weight: 700; /* texte en gras */
@@ -87,9 +87,11 @@
   }
   
   .scrollHint {
-    background: rgba(0, 0, 0, 0.6); /* bandeau opaque en bas */
-    padding: 1rem;
-    text-align: center;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
   }
   
   .arrow {
