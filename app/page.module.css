@@ -13,13 +13,17 @@
 }
 
 
-.container {
-    background-image: url('../public/images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    position: relative;
-  }
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('/images/fond.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
   
   .overlay {
     position: absolute;
@@ -27,7 +31,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* calque noir alpha */
+    background-color: rgba(0, 0, 0, 0.6); /* calque noir alpha */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,3 +91,30 @@
     opacity: 0.9;
   }
   
+  .scrollHint {
+    background: rgba(0, 0, 0, 0.6); /* bandeau opaque en bas */
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .arrow {
+    font-size: 2rem;
+    animation: bounce 1.5s infinite;
+    color: white;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(8px);
+    }
+  }
+  
+  .content {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+  }
