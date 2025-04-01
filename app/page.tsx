@@ -41,7 +41,7 @@ export default function Home() {
           <br />
           <p>
             La Chronodôme 2.1 est la seconde édition d'un événement sportif caritatif au profit de l'association Trisomie 21 Puy de Dôme. Un parcours de 9,8 km est tracé pour l'occasion.<br /><br />
-            L'événement dure symboliquement 21h mais chacun participe comme il ou elle le souhaite : vous pouvez venir faire 1 tour... ou 5O. En marchant, en courant, ou en VTT... Seule votre bonne humeur est indispensable !
+            L'événement dure symboliquement 21h mais chacun participe comme il ou elle le souhaite : vous pouvez venir faire 1 tour... comme 5O. En marchant, en courant, ou en VTT... Seule votre bonne humeur est indispensable !
           </p>
         </div>
         <div className={styles.imageBlock}>
