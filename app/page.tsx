@@ -6,15 +6,16 @@ export default function Home() {
       <div className={styles.overlay}>
         <h1 className={styles.title}>Chronodome21</h1>
         <div className={styles.socials}>
-          <a href="https://twitter.com" className={styles.button}>Twitter</a>
-          <a href="https://linkedin.com" className={styles.button}>LinkedIn</a>
-          <a href="https://github.com" className={styles.button}>GitHub</a>
+          <a href="https://twitter.com" className={styles.button} target="_blank" rel="noopener noreferrer">
+            <FaTwitter /> Twitter
+          </a>
+          <a href="https://linkedin.com" className={styles.button} target="_blank" rel="noopener noreferrer">
+            <FaLinkedin /> LinkedIn
+          </a>
+          <a href="https://github.com" className={styles.button} target="_blank" rel="noopener noreferrer">
+            <FaGithub /> GitHub
+          </a>
         </div>
-        <img
-          src="/images/logo_trisomie_21_pdd.png"
-          alt="Mon logo"
-          className={styles.logo}
-        />
       </div>
     </div>
   );
