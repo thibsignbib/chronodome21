@@ -14,6 +14,11 @@ h1{
   font-weight: bold;
 }
 
+a{
+  font-style: italic;
+  text-decoration: underline;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
