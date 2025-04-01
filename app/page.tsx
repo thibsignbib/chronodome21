@@ -87,12 +87,12 @@ export default function Home() {
             <h1>Restauration</h1>
             <br />
             <p>
-              Un stand de ravitaillement sera présent au départ de la boucle, avec plein de délices sucrés et salés. Une paella sera également proposée de 12h à 17h le dimanche 8 juin, au prix de 10€ la (grosse) barquette.
+              Un stand de ravitaillement sera présent au départ de la boucle, avec plein de délices sucrés et salés qui n'attendent que vous ! Une paella sera également proposée de 12h à 17h le dimanche 8 juin, au prix de 10€ la (grosse) barquette.
             </p>
         </div>
         <div className={styles.textBlock}>
         <a href="https://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" className={styles.buttonContent} target="_blank" rel="noopener noreferrer">
-            <FaPlus /> L'argument nourriture a fini de me convaincre, je m'inscris !!
+            <FaPlus /> Ok tu m'as convaincu, je m'inscris !!
           </a>
         </div>
       </div>
