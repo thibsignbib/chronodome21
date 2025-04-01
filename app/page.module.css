@@ -186,6 +186,17 @@
     margin-bottom: 4rem;
     flex-wrap: wrap;
   }
+
+  .contentRowDoubleText {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+  }
+  
   
   .textBlock {
     max-width: 500px;
@@ -208,8 +219,9 @@
   }
   
   @media (max-width: 768px) {
-    .contentRow {
+    .contentRow, .contentRowDoubleText {
       flex-direction: column !important;
       text-align: center;
     }
+
   }

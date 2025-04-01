@@ -48,7 +48,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={`${styles.contentRow}`}>
+      <div className={styles.contentRowDoubleText}>
       <div className={styles.textBlock}>
           <h1>Emplacement du parking et du départ de la boucle</h1>
           <p>
