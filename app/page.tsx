@@ -63,13 +63,15 @@ export default function Home() {
 
       <div className={styles.contentRow}>
         <div className={styles.textBlock}>
-          <h2>Notre impact</h2>
+          <h1>Emplacement du parking et du départ de la boucle</h1>
           <p>
-            Integer vel velit a metus tincidunt tempor. Nulla facilisi. Aliquam erat volutpat.
+          Quand vous venez de Clermont depuis le col de ceyssat, continuez en direction de Ceyssat et jusqu'à une entrée de chemin signalée par des ballons et rubalises. Tournez sur votre droite, puis suivez la rubalise jusqu'au monument "des fusillés ardents".
+          <br /><br />
+          <a href="https://www.google.com/maps/place/45%C2%B046'26.9%22N+2%C2%B056'11.5%22E/@45.7702757,2.9333126,14.72z/data=!4m4!3m3!8m2!3d45.774131!4d2.93653?entry=ttu&g_ep=EgoyMDI1MDMzMC4wIKXMDSoASAFQAw%3D%3D">Lien Google Maps</a>
           </p>
         </div>
         <div className={styles.imageBlock}>
-          <img src="/images/img3.jpg" alt="Impact" />
+          <img src="/images/map.png" alt="Map icon" />
         </div>
       </div>
     </section>
