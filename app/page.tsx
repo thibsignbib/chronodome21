@@ -102,11 +102,6 @@ export default function Home() {
   <footer className={styles.footer}>
     <div className={styles.footerContent}>
       <p>&copy; 2025 Chronodôme 2.1. Tous droits réservés.</p>
-      <div className={styles.footerLinks}>
-        <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
-          Instagram
-        </a>
-      </div>
     </div>
   </footer>
 </div>
