@@ -48,7 +48,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={`${styles.contentRow} ${styles.reverse}`}>
+      <div className={`${styles.contentRow}`}>
         <div className={styles.imageBlock}>
           <img src="/images/june.png" alt="7 juin" />
         </div>
