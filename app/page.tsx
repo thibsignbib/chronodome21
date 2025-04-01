@@ -20,13 +20,13 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div className={styles.scrollHint}>
-          <BsChevronDown className={styles.arrow} />
-      </div>
+      <a href="#contenu" className={styles.scrollHint}>
+        <BsChevronDown className={styles.arrow} />
+      </a>
 
     </section>
     
-    <section className={styles.content}>
+    <section id="contenu" className={styles.content}>
       <h2>À propos</h2>
       <p>Voici plus d'informations après avoir scrollé 👇</p>
     </section>
