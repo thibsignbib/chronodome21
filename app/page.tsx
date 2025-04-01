@@ -1,4 +1,5 @@
 import styles from './page.module.css';
+import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export default function Home() {
   return (
