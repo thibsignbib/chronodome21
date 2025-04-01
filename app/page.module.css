@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'TitleFont';
+  src: url('/fonts/font1.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TitleFond';
+  src: url('/fonts/font1bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 .container {
     background-image: url('../public/images/background.jpg');
     background-size: cover;
@@ -25,6 +40,14 @@
   .title {
     font-size: 3rem;
     margin-bottom: 2rem;
+    font-family: 'TitleFont', sans-serif;
+  }
+
+  .titleStrong {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: 'TitleFont', sans-serif;
+    font-weight: 700; /* texte en gras */
   }
   
   .socials {
