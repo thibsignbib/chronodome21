@@ -38,13 +38,13 @@
   }
   
   .title {
-    font-size: 3rem;
+    font-size: 6rem;
     margin-bottom: 2rem;
     font-family: 'TitleFont', sans-serif;
   }
 
   .titleStrong {
-    font-size: 3rem;
+    font-size: 6rem;
     margin-bottom: 2rem;
     font-family: 'TitleFont', sans-serif;
     font-weight: 700; /* texte en gras */
