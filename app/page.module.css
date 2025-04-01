@@ -42,7 +42,7 @@
   background-size: cover;
   background-position: center;
   opacity: 0;
-  animation: fade 15s infinite;
+  animation: fade 25s infinite;
   animation-timing-function: ease-in-out;
 }
 
