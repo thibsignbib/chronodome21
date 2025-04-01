@@ -128,10 +128,31 @@
     transition: all 0.3s ease;
     backdrop-filter: blur(4px);
   }
+
+  .buttonContent {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    color: black;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+  }
   
   .button:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-color: white;
+    transform: translateY(-2px);
+  }
+
+  .buttonContent:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-color: black;
     transform: translateY(-2px);
   }
   
@@ -224,4 +245,35 @@
       text-align: center;
     }
 
+  }
+
+  .footer {
+    background-color: #111;
+    color: #fff;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .footerContent {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .footerLinks {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .footerLinks a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footerLinks a:hover {
+    color: #fff;
   }

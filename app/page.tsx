@@ -4,6 +4,7 @@ import { BsChevronDown } from 'react-icons/bs';
 
 export default function Home() {
   return (
+  <div>
   <main>
     <section className={styles.hero}>
       <div className={styles.slideshow}>
@@ -57,7 +58,7 @@ export default function Home() {
             </p>
         </div>
         <div className={styles.textBlock}>
-          <a href="https://pots.lydia.me/collect/pots?id=71624-chronodome-2-1&fbclid=IwZXh0bgNhZW0CMTAAAR0s0ZyZlPr_sNZA7milhHObpNjSjEUxTZ2KIT3oL" className={styles.button} target="_blank" rel="noopener noreferrer">
+          <a href="https://pots.lydia.me/collect/pots?id=71624-chronodome-2-1&fbclid=IwZXh0bgNhZW0CMTAAAR0s0ZyZlPr_sNZA7milhHObpNjSjEUxTZ2KIT3oL" className={styles.buttonContent} target="_blank" rel="noopener noreferrer">
             <FaEuroSign /> Faire un don
           </a>
         </div>
@@ -90,12 +91,24 @@ export default function Home() {
             </p>
         </div>
         <div className={styles.textBlock}>
-        <a href="https://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" className={styles.button} target="_blank" rel="noopener noreferrer">
+        <a href="https://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" className={styles.buttonContent} target="_blank" rel="noopener noreferrer">
             <FaPlus /> L'argument nourriture a fini de me convaincre, je m'inscris !!
           </a>
         </div>
       </div>
     </section>
   </main>
+
+  <footer className={styles.footer}>
+    <div className={styles.footerContent}>
+      <p>&copy; 2025 Chronodôme 2.1. Tous droits réservés.</p>
+      <div className={styles.footerLinks}>
+        <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
+          Instagram
+        </a>
+      </div>
+    </div>
+  </footer>
+</div>
   );
 }
