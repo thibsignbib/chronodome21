@@ -5,7 +5,7 @@ import { BsChevronDown } from 'react-icons/bs';
 export default function Home() {
   return (
   <main>
-    <section classname={styles.hero}>
+    <section className={styles.hero}>
       <div className={styles.overlay}>
         <h1 className={styles.title}>Chronodome 2.1</h1>
         <div className={styles.socials}>
