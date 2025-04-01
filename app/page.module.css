@@ -170,9 +170,50 @@
     }
   }
   
-  .content {
+  .contentSection {
     padding: 4rem 2rem;
     background-color: #fff;
     color: #333;
     text-align: center;
+  }
+
+  .contentRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+  }
+  
+  .reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .textBlock {
+    flex: 1 1 300px;
+    max-width: 500px;
+    padding: 1rem;
+  }
+  
+  .imageBlock {
+    flex: 1 1 300px;
+    max-width: 500px;
+    padding: 1rem;
+  }
+  
+  .imageBlock img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .contentRow,
+    .reverse {
+      flex-direction: column !important;
+      text-align: center;
+    }
   }
