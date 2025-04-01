@@ -19,10 +19,11 @@ export default function Home() {
             <FaInstagram /> Suivez Arthur sur Instagram
           </a>
         </div>
-        <div className={styles.scrollHint}>
-            <BsChevronDown className={styles.arrow} />
-        </div>
       </div>
+      <div className={styles.scrollHint}>
+          <BsChevronDown className={styles.arrow} />
+      </div>
+
     </section>
     
     <section className={styles.content}>
