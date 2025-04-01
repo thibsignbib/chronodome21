@@ -56,7 +56,7 @@ export default function Home() {
               Vous pouvez récupérer votre dossard <b>gratuitement</b> en vous présentant simplement au départ, le jour de l'événement. Nous vous proposons de contribuer via un don libre à l'organisation, dont l'intégralité des bénéfices reviendra à l'association Trisomie 21 Puy de Dôme.
             </p>
         </div>
-        <div> className={styles.textBlock}>
+        <div className={styles.textBlock}>
           <a href="https://pots.lydia.me/collect/pots?id=71624-chronodome-2-1&fbclid=IwZXh0bgNhZW0CMTAAAR0s0ZyZlPr_sNZA7milhHObpNjSjEUxTZ2KIT3oL" className={styles.button} target="_blank" rel="noopener noreferrer">
             <FaEuroSign /> Faire un don
           </a>
@@ -89,7 +89,7 @@ export default function Home() {
               Un stand de ravitaillement sera présent au départ de la boucle, avec plein de délices sucrés et salés. Une paella sera également proposée de 12h à 17h le dimanche 8 juin, au prix de 10€ la (grosse) barquette.
             </p>
         </div>
-        <div> className={styles.textBlock}>
+        <div className={styles.textBlock}>
         <a href="https://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" className={styles.button} target="_blank" rel="noopener noreferrer">
             <FaPlus /> L'argument nourriture a fini de me convaincre, je m'inscris !!
           </a>
