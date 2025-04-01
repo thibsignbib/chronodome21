@@ -14,7 +14,7 @@ export default function Home() {
         <div className={styles.slide + ' ' + styles.slide5}></div>
       </div>
       <div className={styles.overlay}>
-        <h1 className={styles.title}>Chronodome 2.1</h1>
+        <h1 className={styles.title}>Chronodôme 2.1</h1>
         <div className={styles.socials}>
           <a href="https://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" className={styles.button} target="_blank" rel="noopener noreferrer">
             <FaPlus /> S'inscrire à l'événement
@@ -36,26 +36,27 @@ export default function Home() {
     <section id="contenu" className={styles.contentSection}>
       <div className={styles.contentRow}>
         <div className={styles.textBlock}>
-          <h1>La Chronodome 2.1, c'est quoi ?</h1>
+          <h1>La Chronodôme 2.1, c'est quoi ?</h1>
           <br />
           <p>
-            La Chronodome 2.1 est la seconde édition d'un événement sportif caritatif au profit de l'association Trisomie 21 Puy de Dôme. Un parcours de 9,8 km est tracé pour l'occasion.<br /><br />
+            La Chronodôme 2.1 est la seconde édition d'un événement sportif caritatif au profit de l'association Trisomie 21 Puy de Dôme. Un parcours de 9,8 km est tracé pour l'occasion.<br /><br />
             L'événement dure symboliquement 21h mais chacun participe comme il ou elle le souhaite : vous pouvez venir faire 1 tour... ou 5O. En marchant, en courant, ou en VTT... Seule votre bonne humeur est indispensable !
           </p>
         </div>
         <div className={styles.imageBlock}>
-          <img src="/images/logo_trisomie_21_pdd.png" alt="Mission" />
+          <img src="/images/logo_trisomie_21_pdd.png" alt="logo association trisomie 21 puy de dôme" />
         </div>
       </div>
 
       <div className={`${styles.contentRow} ${styles.reverse}`}>
         <div className={styles.imageBlock}>
-          <img src="/images/img2.jpg" alt="Notre équipe" />
+          <img src="/images/june.png" alt="7 juin" />
         </div>
         <div className={styles.textBlock}>
-          <h2>Notre équipe</h2>
+          <h1>La date</h1>
+          <br />
           <p>
-            Morbi luctus, justo a ullamcorper convallis, nisi erat fermentum erat, a tincidunt nulla justo at libero.
+            La Chronodôme 2.1 aura lieu le samedi 7 juin à partir de 19h et se terminera donc le dimanche 8 juin à 16h.
           </p>
         </div>
       </div>
