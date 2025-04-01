@@ -10,10 +10,10 @@ export default function Home() {
           <a href="https://twitter.com" className={styles.button} target="_blank" rel="noopener noreferrer">
             <FaPlus /> S'inscrire à l'événement
           </a>
-          <a href="https://linkedin.com" className={styles.button} target="_blank" rel="noopener noreferrer">
+          <a href="https://pots.lydia.me/collect/pots?id=71624-chronodome-2-1&fbclid=IwZXh0bgNhZW0CMTAAAR0s0ZyZlPr_sNZA7milhHObpNjSjEUxTZ2KIT3oL" className={styles.button} target="_blank" rel="noopener noreferrer">
             <FaEuroSign /> Faire un don
           </a>
-          <a href="https://github.com" className={styles.button} target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/semelle_o_monde/" className={styles.button} target="_blank" rel="noopener noreferrer">
             <FaInstagram /> Suivez Arthur sur Instagram
           </a>
         </div>
