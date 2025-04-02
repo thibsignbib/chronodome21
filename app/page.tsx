@@ -54,7 +54,7 @@ export default function Home() {
             <h1>Prix et inscriptions</h1>
             <br />
             <p>
-              Vous pouvez récupérer votre dossard <b>gratuitement</b> en vous présentant simplement au départ, le jour de l'événement. Nous vous proposons de contribuer via un don libre à l'organisation, dont l'intégralité des bénéfices reviendra à l'association Trisomie 21 Puy de Dôme.
+              Vous pouvez récupérer votre dossard en vous présentant simplement au départ, le jour de l'événement. L'inscription étant gratuite, apporter une petite contribution sucrée ou salée pour le ravitaillement (gateau, chips, bonbons, fruits, etc.) nous aiderait beaucoup ! Nous vous proposons également de contribuer via un don libre à l'organisation, dont l'intégralité des bénéfices reviendra à l'association Trisomie 21 Puy de Dôme.
             </p>
         </div>
         <div className={styles.textBlock}>
