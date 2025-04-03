@@ -1,21 +1,8 @@
-'use client';
-
-import { useEffect, useState } from 'react';
 import styles from './page.module.css';
 import { FaPlus, FaEuroSign, FaInstagram } from 'react-icons/fa';
 import { BsChevronDown } from 'react-icons/bs';
 
 export default function Home() {
-
-  const [participantCount, setParticipantCount] = useState<number | null>(null);
-
-  useEffect(() => {
-    fetch('/api/participants')
-      .then(res => res.json())
-      .then(data => setParticipantCount(data.participants))
-      .catch(err => console.error('Erreur API participants', err));
-  }, []);
-
   return (
   <div>
   <main>
@@ -40,13 +27,6 @@ export default function Home() {
             <FaInstagram /> Les dernières news
           </a>
         </div>
-        <section className={styles.participants}>
-          <h2>
-            {participantCount === null
-              ? ''
-              : `Déjà <b>${participantCount}</b> inscrit·e·s !`}
-          </h2>
-        </section>
       </div>
       <a href="#contenu" className={styles.scrollHint}>
         <BsChevronDown className={styles.arrow} />
