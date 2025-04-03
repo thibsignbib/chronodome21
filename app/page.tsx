@@ -74,13 +74,25 @@ export default function Home() {
               La Chronodôme 2.1 aura lieu le samedi 7 juin à partir de 19h et se terminera donc le dimanche 8 juin à 16h.
             </p>
         </div>
+      </div>
+
+      <div className={styles.contentRow}>
+       <div className={styles.textBlock}>
+          <h1>Emplacement du parking et du départ</h1>
+          <p>
+          Quand vous venez de Clermont depuis le col de ceyssat, continuez en direction de Ceyssat et jusqu'à une entrée de chemin signalée par des ballons et rubalises. Tournez sur votre droite, puis suivez la rubalise jusqu'au monument "des fusillés ardents".
+         </p>
+        </div>
         <div className={styles.textBlock}>
-            <h1>Emplacement du parking et du départ</h1>
-            <p>
-            Quand vous venez de Clermont depuis le col de ceyssat, continuez en direction de Ceyssat et jusqu'à une entrée de chemin signalée par des ballons et rubalises. Tournez sur votre droite, puis suivez la rubalise jusqu'au monument "des fusillés ardents".
-            <br /><br />
-            <a href="https://www.google.com/maps/place/45%C2%B046'26.9%22N+2%C2%B056'11.5%22E/@45.7702757,2.9333126,14.72z/data=!4m4!3m3!8m2!3d45.774131!4d2.93653?entry=ttu&g_ep=EgoyMDI1MDMzMC4wIKXMDSoASAFQAw%3D%3D">Lien Google Maps</a>
-            </p>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2733.6829172977566!2d2.9333062!3d45.774131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDQ2JzI2LjkiTiAywrA1NicxMS41IkU!5e0!3m2!1sfr!2sfr!4v1700000000000"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </div>
 
