@@ -43,7 +43,7 @@ export default function Home() {
         <section className={styles.participants}>
           <h2>
             {participantCount === null
-              ? 'Chargement...'
+              ? ''
               : `Déjà <b>${participantCount}</b> inscrit·e·s !`}
           </h2>
         </section>
