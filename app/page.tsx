@@ -29,13 +29,13 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <a href="#contenu" className={styles.scrollHint}>
+      <a href="#content" className={styles.scrollHint}>
         <BsChevronDown className={styles.arrow} />
       </a>
 
     </section>
     
-    <section id="contenu" className={styles.contentSection}>
+    <section id="content" className={styles.contentSection}>
       <FlipdownTimer />
       <div className={styles.contentRow}>
         <div className={styles.textBlock}>
@@ -87,7 +87,7 @@ export default function Home() {
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2733.6829172977566!2d2.9333062!3d45.774131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDQ2JzI2LjkiTiAywrA1NicxMS41IkU!5e0!3m2!1sfr!2sfr!4v1700000000000"
             width="100%"
-            height="450"
+            height="375"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
