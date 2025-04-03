@@ -25,7 +25,7 @@ export const metadata = {
     siteName: 'Chronodôme 2.1',
     images: [
       {
-        url: '/images/siteicon.png',
+        url: 'https://chronodome21.fr/images/siteicon.png',
         width: 1200,
         height: 630,
         alt: 'Affiche de la Chronodôme 2.1',
