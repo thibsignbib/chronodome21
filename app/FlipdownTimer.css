@@ -59,3 +59,22 @@
     transform: rotateX(0deg);
   }
 }
+
+@media (max-width: 768px) {
+  .flipdown-timer {
+    gap: 1rem;
+  }
+
+  .flipdown-label {
+    font-size: 0.75rem;
+  }
+
+  .flipdown-digit {
+    width: 30px;
+    height: 45px;
+  }
+
+  .flipdown-digit .flip {
+    font-size: 1.5rem;
+  }
+}
