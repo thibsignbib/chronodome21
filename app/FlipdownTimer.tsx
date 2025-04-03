@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import './FlipdownTimer.module.css';
+import './FlipdownTimer.css';
 
 const FlipdownTimer = () => {
   const targetDate = new Date('2025-06-07T19:00:00');
