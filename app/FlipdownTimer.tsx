@@ -37,7 +37,14 @@ const FlipdownTimer = () => {
     <div className="flipdown-timer">
       {['days', 'hours', 'minutes', 'seconds'].map((unit) => (
         <div key={unit} className="flipdown-unit">
-          <div className="flipdown-label">{unit.toUpperCase()}</div>
+          <div className="flipdown-label">
+            {{
+              days: 'JOURS',
+              hours: 'HEURES',
+              minutes: 'MINUTES',
+              seconds: 'SECONDES',
+            }[unit as keyof typeof timeLeft]}
+          </div>
           <div className="flipdown-digits">
             {timeLeft[unit as keyof typeof timeLeft].split('').map((char, i) => (
               <div key={i} className="flipdown-digit">
