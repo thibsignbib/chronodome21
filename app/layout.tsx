@@ -16,8 +16,23 @@ export const metadata = {
   title: 'Chronodôme 2.1',
   description: 'Événement sportif caritatif au profit de Trisomie 21 Puy de Dôme',
   icons: {
-    icon: '/images/siteicon.png',
+    icon: '/images/background3.png',
   },
+  openGraph: {
+    title: 'Chronodôme 2.1',
+    description: 'Un événement sportif et solidaire dans le Puy de Dôme',
+    url: 'https://chronodome21.fr',
+    siteName: 'Chronodôme 2.1',
+    images: [
+      {
+        url: '/images/siteicon.png',
+        width: 1200,
+        height: 630,
+        alt: 'Affiche de la Chronodôme 2.1',
+      },
+    ],
+    type: 'website',
+  }
 };
 
 export default function RootLayout({
