@@ -1,7 +1,7 @@
 import styles from './page.module.css';
 import { FaPlus, FaEuroSign, FaInstagram } from 'react-icons/fa';
 import { BsChevronDown } from 'react-icons/bs';
-import Countdown from './countdown';
+import Countdown from './FlipdownTimer';
 
 export default function Home() {
   return (
