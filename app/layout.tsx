@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: 'Chronodôme 2.1',
   description: 'Événement sportif caritatif au profit de Trisomie 21 Puy de Dôme',
   icons: {
-    icon: '/images/favicon.png',
+    icon: '/favicon.png',
   },
   openGraph: {
     title: 'Chronodôme 2.1',
