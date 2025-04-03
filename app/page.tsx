@@ -1,6 +1,7 @@
 import styles from './page.module.css';
 import { FaPlus, FaEuroSign, FaInstagram } from 'react-icons/fa';
 import { BsChevronDown } from 'react-icons/bs';
+import Countdown from './countdown';
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
     </section>
     
     <section id="contenu" className={styles.contentSection}>
+      <Countdown />
       <div className={styles.contentRow}>
         <div className={styles.textBlock}>
           <h1>La Chronodôme 2.1, c'est quoi ?</h1>
