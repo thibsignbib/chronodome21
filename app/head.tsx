@@ -6,12 +6,12 @@ export default function Head() {
   
         <meta property="og:title" content="Chronodôme 2.1" />
         <meta property="og:description" content="Un événement sportif et solidaire dans le Puy de Dôme" />
-        <meta property="og:image" content="https://chronodome21.fr/images/siteicon.jpg" />
+        <meta property="og:image" content="https://chronodome21.fr/siteicon.jpg" />
         <meta property="og:url" content="https://chronodome21.fr" />
         <meta property="og:type" content="website" />
   
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://chronodome21.fr/images/siteicon.jpg" />
+        <meta name="twitter:image" content="https://chronodome21.fr/siteicon.jpg" />
       </>
     );
   }
