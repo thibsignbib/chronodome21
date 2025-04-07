@@ -258,6 +258,12 @@
         flex-direction: column !important;
         text-align: center;
       }
+
+      .textBlock, .imageBlock{
+        flex: none !important;
+        width: 100%;
+        max-width: 100%;
+      }
     
       .imageBlock {
         flex: unset;           
