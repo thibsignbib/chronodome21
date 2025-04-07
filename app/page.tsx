@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import styles from './page.module.css';
-import { FaPlus, FaEuroSign, FaInstagram, FaBars, FaCamera  } from 'react-icons/fa';
-import { LuLightbulb } from "react-icons/lu";
+import { FaPlus, FaEuroSign, FaInstagram, FaBars  } from 'react-icons/fa';
+import { LuLightbulb, LuCamera, LuEuro, LuPlus   } from "react-icons/lu";
 import { SiGithubsponsors } from "react-icons/si";
 import { BsChevronDown } from 'react-icons/bs';
 import FlipdownTimer from './FlipdownTimer';
@@ -20,10 +20,10 @@ export default function Home() {
           <LuLightbulb /> Concept
           </a>
           <a href="https://pots.lydia.me/collect/pots?id=71624-chronodome-2-1" target="_blank" rel="noopener noreferrer">
-            <FaPlus /> Inscription
+            <LuPlus /> Inscription
           </a>
           <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
-            <FaEuroSign /> Faire un don
+            <LuEuro /> Faire un don
           </a>
           <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
             <FaInstagram /> News
@@ -32,7 +32,7 @@ export default function Home() {
             <SiGithubsponsors /> Partenaires
           </a>
           <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
-            <FaCamera /> Crédits
+            <LuCamera /> Crédits
           </a>
 
         </div>
@@ -78,8 +78,9 @@ export default function Home() {
           <main>
             <section id="content" className={styles.contentSection}>
             <FlipdownTimer />
+            
+            <div className={styles.sectionTitle}>Concept</div>
             <div className={styles.contentRow}>
-              <div className={styles.sectionTitle}>Concept</div>
               <div className={styles.textBlock}>
                 <h1>La Chronodôme 2.1, c'est quoi ?</h1>
                 <br />
