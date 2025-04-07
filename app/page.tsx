@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <div>
-      {/* Navigation Menu */}
+      {/* Navigation */}
       <nav className={styles.navbar}>
         <div className={styles.logo}>Chronodôme 2.1</div>
         <div className={styles.desktopMenu}>
@@ -30,7 +30,6 @@ export default function Home() {
         </button>
       </nav>
 
-      {/* Mobile Dropdown */}
       {menuOpen && (
         <div className={styles.mobileMenu}>
           <a href="https://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" target="_blank" rel="noopener noreferrer">
@@ -45,6 +44,28 @@ export default function Home() {
         </div>
       )}
 
+      <main>
+        <section className={styles.hero}>
+          <div className={styles.slideshow}>
+            <div className={`${styles.slide} ${styles.slide1}`}></div>
+            <div className={`${styles.slide} ${styles.slide2}`}></div>
+            <div className={`${styles.slide} ${styles.slide3}`}></div>
+            <div className={`${styles.slide} ${styles.slide4}`}></div>
+            <div className={`${styles.slide} ${styles.slide5}`}></div>
+          </div>
+
+          <div className={styles.overlay}>
+            <h1 className={styles.title}>Chronodôme 2.1</h1>
+          </div>
+
+          <a href="#content" className={styles.scrollHint}>
+            <BsChevronDown className={styles.arrow} />
+          </a>
+        </section>
+
+        <section id="content" className={styles.contentSection}>
+          <FlipdownTimer />
+          
           <main>
             <section id="content" className={styles.contentSection}>
             <FlipdownTimer />
@@ -129,6 +150,11 @@ export default function Home() {
             <p>&copy; 2025 Chronodôme 2.1. Tous droits réservés.</p>
           </div>
         </footer> 
+
+        </section>
+      </main>
     </div>
   );
 }
+
+          
