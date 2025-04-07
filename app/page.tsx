@@ -13,7 +13,6 @@ export default function Home() {
     <div>
       {/* Navigation */}
       <nav className={styles.navbar}>
-        <div className={styles.logo}>Chronodôme 2.1</div>
         <div className={styles.desktopMenu}>
           <a href="https://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" target="_blank" rel="noopener noreferrer">
             <FaPlus /> S'inscrire
