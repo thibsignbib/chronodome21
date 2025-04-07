@@ -77,7 +77,7 @@ export default function Home() {
           
           <main>
             <section id="content" className={styles.contentSection}>
-            <img src="images/logo_fleurs.png" alt="logo chronodome" />
+            
             <div className={styles.contentRow}>
               <div className={styles.textBlock}>
                 <h1>Concept</h1>
@@ -86,6 +86,10 @@ export default function Home() {
                   La Chronodôme 2.1 est la seconde édition d'un événement sportif caritatif au profit de l'association Trisomie 21 Puy de Dôme. Un parcours de 9,8 km est tracé pour l'occasion.<br /><br />
                   L'événement dure symboliquement 21h mais chacun participe comme il ou elle le souhaite : vous pouvez venir faire 1 tour... comme 5O. En marchant ou en courant... Seule votre bonne humeur est indispensable !
                 </p>
+                <p>
+                    L'événement aura lieu le samedi 7 juin à partir de 19h et se terminera donc le dimanche 8 juin à 16h.
+                </p>
+                <FlipdownTimer />
               </div>
               <div className={styles.imageBlock}>
                 <img src="/images/logo_trisomie_21_pdd.png" alt="logo association trisomie 21 puy de dôme" />
@@ -104,17 +108,6 @@ export default function Home() {
                 <a href="https://pots.lydia.me/collect/pots?id=71624-chronodome-2-1&fbclid=IwZXh0bgNhZW0CMTAAAR0s0ZyZlPr_sNZA7milhHObpNjSjEUxTZ2KIT3oL" className={styles.buttonContent} target="_blank" rel="noopener noreferrer">
                   <FaEuroSign /> Faire un don
                 </a>
-              </div>
-            </div>
-
-            <div className={styles.contentRowDoubleText}>
-              <div className={styles.textBlock}>
-                  <h1>La date</h1>
-                  <br />
-                  <p>
-                    La Chronodôme 2.1 aura lieu le samedi 7 juin à partir de 19h et se terminera donc le dimanche 8 juin à 16h.
-                  </p>
-                  <FlipdownTimer />
               </div>
             </div>
 
