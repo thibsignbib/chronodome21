@@ -58,6 +58,7 @@ export default function Home() {
           </div>
 
           <a href="#content" className={styles.scrollHint}>
+            <h3>Plus d'informations</h3>
             <BsChevronDown className={styles.arrow} />
           </a>
         </section>
