@@ -257,13 +257,20 @@
       }
     
       .imageBlock {
-        align-items: flex-start; 
+        flex: unset;           
+        max-width: 100%;
+        width: 100%;
+        display: block;        
+        padding: 1rem 0;
       }
+      
     
       .imageBlock iframe,
       .imageBlock img {
-        height: auto; 
         max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
       }
     }
     
