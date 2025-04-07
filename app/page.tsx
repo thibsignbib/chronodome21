@@ -89,11 +89,11 @@ export default function Home() {
                 <p>
                     L'événement aura lieu le samedi 7 juin à partir de 19h et se terminera donc le dimanche 8 juin à 16h.
                 </p>
-                <FlipdownTimer />
               </div>
               <div className={styles.imageBlock}>
                 <img src="/images/logo_trisomie_21_pdd.png" alt="logo association trisomie 21 puy de dôme" />
               </div>
+              <FlipdownTimer />
             </div>
 
             <div className={styles.contentRow}>
