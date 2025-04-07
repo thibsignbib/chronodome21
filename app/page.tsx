@@ -58,13 +58,10 @@ export default function Home() {
           </div>
 
           <a href="#content" className={styles.scrollHint}>
-            <h3>Plus d'informations</h3>
+            <div className={styles.scrollHintText}>Plus d'informations</div>
             <BsChevronDown className={styles.arrow} />
           </a>
         </section>
-
-        <section id="content" className={styles.contentSection}>
-          <FlipdownTimer />
           
           <main>
             <section id="content" className={styles.contentSection}>
@@ -143,9 +140,7 @@ export default function Home() {
               </div>
             </div>
           </section>
-          </main>
-        </section>
-        
+          </main>        
 
         <footer className={styles.footer}>
           <div className={styles.footerContent}>
