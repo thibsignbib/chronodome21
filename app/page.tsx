@@ -79,6 +79,7 @@ export default function Home() {
             <section id="content" className={styles.contentSection}>
             <FlipdownTimer />
             <div className={styles.contentRow}>
+              <div className={styles.sectionTitle}>Concept</div>
               <div className={styles.textBlock}>
                 <h1>La Chronodôme 2.1, c'est quoi ?</h1>
                 <br />

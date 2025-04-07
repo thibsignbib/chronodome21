@@ -5,12 +5,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'TitleFond';
-  src: url('/fonts/font1bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
 
 .hero {
   position: relative;
@@ -463,5 +457,13 @@
     z-index: 3;
     opacity: 0.8;
     margin-bottom: 30px;
+  }
+
+  .sectionTitle{
+    font-family: titleFont, sans-serif;
+    font-size: 3 rem;
+    color : black;
+    margin-top: 1rem;
+    margin-bottom: 0.5 rem;
   }
   
