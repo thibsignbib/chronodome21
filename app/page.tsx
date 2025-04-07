@@ -77,12 +77,10 @@ export default function Home() {
           
           <main>
             <section id="content" className={styles.contentSection}>
-            <FlipdownTimer />
-            
-            <div className={styles.sectionTitle}>Concept</div>
+            <img src="images/logo_fleurs.png" alt="logo chronodome" />
             <div className={styles.contentRow}>
               <div className={styles.textBlock}>
-                <h1>La Chronodôme 2.1, c'est quoi ?</h1>
+                <h1>Concept</h1>
                 <br />
                 <p>
                   La Chronodôme 2.1 est la seconde édition d'un événement sportif caritatif au profit de l'association Trisomie 21 Puy de Dôme. Un parcours de 9,8 km est tracé pour l'occasion.<br /><br />
@@ -116,6 +114,7 @@ export default function Home() {
                   <p>
                     La Chronodôme 2.1 aura lieu le samedi 7 juin à partir de 19h et se terminera donc le dimanche 8 juin à 16h.
                   </p>
+                  <FlipdownTimer />
               </div>
             </div>
 
