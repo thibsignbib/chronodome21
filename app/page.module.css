@@ -199,7 +199,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 80%;
     gap: 2rem;
     margin-bottom: 2rem;
     flex-wrap: wrap;
@@ -217,14 +216,20 @@
   
   
   .textBlock {
+    text-align: justify;
+  }
+
+  .textBlock, .imageBlock {
+    flex: 1 1 500px;
     max-width: 500px;
     padding: 1rem;
-    text-align: justify;
+    box-sizing: border-box;
   }
   
   .imageBlock {
-    max-width: 500px;
-    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .imageBlock img {
