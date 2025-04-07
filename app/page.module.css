@@ -247,6 +247,25 @@
       text-align: center;
     }
 
+    @media (max-width: 768px) {
+      .contentRow,
+      .contentRowDoubleText {
+        flex-direction: column !important;
+        text-align: center;
+      }
+    
+      .imageBlock {
+        align-items: flex-start; 
+      }
+    
+      .imageBlock iframe,
+      .imageBlock img {
+        height: auto; 
+        max-width: 100%;
+      }
+    }
+    
+
   }
 
   .footer {
