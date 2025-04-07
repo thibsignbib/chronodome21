@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 import styles from './page.module.css';
-import { FaPlus, FaEuroSign, FaInstagram, FaBars } from 'react-icons/fa';
+import { FaPlus, FaEuroSign, FaInstagram, FaBars, FaCamera  } from 'react-icons/fa';
+import { LuLightbulb } from "react-icons/lu";
+import { SiGithubsponsors } from "react-icons/si";
 import { BsChevronDown } from 'react-icons/bs';
 import FlipdownTimer from './FlipdownTimer';
 
@@ -15,14 +17,24 @@ export default function Home() {
       <nav className={styles.navbar}>
         <div className={styles.desktopMenu}>
           <a href="https://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" target="_blank" rel="noopener noreferrer">
-            <FaPlus /> S'inscrire
+          <LuLightbulb /> Concept
           </a>
           <a href="https://pots.lydia.me/collect/pots?id=71624-chronodome-2-1" target="_blank" rel="noopener noreferrer">
+            <FaPlus /> Inscription
+          </a>
+          <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
             <FaEuroSign /> Faire un don
           </a>
           <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
-            <FaInstagram /> Instagram
+            <FaInstagram /> News
           </a>
+          <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
+            <SiGithubsponsors /> Partenaires
+          </a>
+          <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
+            <FaCamera /> Crédits
+          </a>
+
         </div>
         <button className={styles.burger} onClick={() => setMenuOpen(!menuOpen)}>
           <FaBars />
@@ -32,7 +44,7 @@ export default function Home() {
       {menuOpen && (
         <div className={styles.mobileMenu}>
           <a href="https://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" target="_blank" rel="noopener noreferrer">
-            <FaPlus /> S'inscrire
+            <FaPlus /> Concept
           </a>
           <a href="https://pots.lydia.me/collect/pots?id=71624-chronodome-2-1" target="_blank" rel="noopener noreferrer">
             <FaEuroSign /> Faire un don
