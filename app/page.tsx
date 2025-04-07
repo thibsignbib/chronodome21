@@ -104,7 +104,7 @@ export default function Home() {
                     Vous pouvez récupérer votre dossard en vous présentant simplement au départ, le jour de l'événement. L'inscription étant gratuite, apporter une petite contribution sucrée ou salée pour le ravitaillement (gateau, chips, bonbons, fruits, etc.) nous aiderait beaucoup ! Nous vous proposons également de contribuer via un don libre à l'organisation, dont l'intégralité des bénéfices reviendra à l'association Trisomie 21 Puy de Dôme.
                   </p>
               </div>
-              <div className={styles.textBlock}>
+              <div className={styles.imageBlock}>
                 <a href="https://pots.lydia.me/collect/pots?id=71624-chronodome-2-1&fbclid=IwZXh0bgNhZW0CMTAAAR0s0ZyZlPr_sNZA7milhHObpNjSjEUxTZ2KIT3oL" className={styles.buttonContent} target="_blank" rel="noopener noreferrer">
                   <FaEuroSign /> Faire un don
                 </a>
@@ -118,7 +118,7 @@ export default function Home() {
                 Quand vous venez de Clermont depuis le col de ceyssat, continuez en direction de Ceyssat et jusqu'à une entrée de chemin signalée par des ballons et rubalises. Tournez sur votre droite, puis suivez la rubalise jusqu'au monument "des fusillés ardents".
               </p>
               </div>
-              <div className={styles.textBlock}>
+              <div className={styles.imageBlock}>
               <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2733.6829172977566!2d2.9333062!3d45.774131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDQ2JzI2LjkiTiAywrA1NicxMS41IkU!5e0!3m2!1sfr!2sfr!4v1700000000000"
                   width="100%"
@@ -139,7 +139,7 @@ export default function Home() {
                     Un stand de ravitaillement sera présent au départ de la boucle, avec plein de délices sucrés et salés qui n'attendent que vous ! Une paella sera également proposée de 12h à 17h le dimanche 8 juin, au prix de 10€ la (grosse) barquette.
                   </p>
               </div>
-              <div className={styles.textBlock}>
+              <div className={styles.imageBlock}>
               <a href="https://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" className={styles.buttonContent} target="_blank" rel="noopener noreferrer">
                   <FaPlus /> Ok tu m'as convaincu, je m'inscris !!
                 </a>
