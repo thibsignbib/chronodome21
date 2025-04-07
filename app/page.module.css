@@ -203,19 +203,10 @@
     justify-content: center;
     gap: 2rem;
     margin-bottom: 2rem;
+    max-width: 1100px;
+    width: 100%;
     flex-wrap: wrap;
   }
-
-  .contentRowDoubleText {
-    display: flex;
-    flex-direction: row;
-    align-items: top;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 4rem;
-    flex-wrap: wrap;
-  }
-  
   
   .textBlock {
     text-align: justify;
