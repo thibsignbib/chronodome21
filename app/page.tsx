@@ -97,20 +97,6 @@ export default function Home() {
             </div>
             <FlipdownTimer />
 
-            <div className={styles.contentRow}>
-              <div className={styles.textBlock}>
-                  <h1>Prix et inscriptions</h1>
-                  <br />
-                  <p>
-                    Vous pouvez récupérer votre dossard en vous présentant simplement au départ, le jour de l'événement. L'inscription étant gratuite, apporter une petite contribution sucrée ou salée pour le ravitaillement (gateau, chips, bonbons, fruits, etc.) nous aiderait beaucoup ! Nous vous proposons également de contribuer via un don libre à l'organisation, dont l'intégralité des bénéfices reviendra à l'association Trisomie 21 Puy de Dôme.
-                  </p>
-              </div>
-              <div className={styles.imageBlock}>
-                <a href="https://pots.lydia.me/collect/pots?id=71624-chronodome-2-1&fbclid=IwZXh0bgNhZW0CMTAAAR0s0ZyZlPr_sNZA7milhHObpNjSjEUxTZ2KIT3oL" className={styles.buttonContent} target="_blank" rel="noopener noreferrer">
-                  <FaEuroSign /> Faire un don
-                </a>
-              </div>
-            </div>
 
             <div className={styles.contentRow}>
             <div className={styles.textBlock}>
@@ -131,6 +117,23 @@ export default function Home() {
                 />
               </div>
             </div>
+
+            <div className={styles.contentRow}>
+              <div className={styles.textBlock}>
+                  <h1>Inscription</h1>
+                  <br />
+                  <p>
+                    Vous pouvez récupérer votre dossard en vous présentant simplement au départ, le jour de l'événement. L'inscription étant gratuite, apporter une petite contribution sucrée ou salée pour le ravitaillement (gateau, chips, bonbons, fruits, etc.) nous aiderait beaucoup ! Nous vous proposons également de contribuer via un don libre à l'organisation, dont l'intégralité des bénéfices reviendra à l'association Trisomie 21 Puy de Dôme.
+                  </p>
+              </div>
+              <div className={styles.imageBlock}>
+                <a href="https://pots.lydia.me/collect/pots?id=71624-chronodome-2-1&fbclid=IwZXh0bgNhZW0CMTAAAR0s0ZyZlPr_sNZA7milhHObpNjSjEUxTZ2KIT3oL" className={styles.buttonContent} target="_blank" rel="noopener noreferrer">
+                  <FaEuroSign /> Faire un don
+                </a>
+              </div>
+            </div>
+
+            
 
             <div className={styles.contentRow}>
               <div className={styles.textBlock}>
