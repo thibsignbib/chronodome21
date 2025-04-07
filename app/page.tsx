@@ -93,8 +93,8 @@ export default function Home() {
               <div className={styles.imageBlock}>
                 <img src="/images/logo_trisomie_21_pdd.png" alt="logo association trisomie 21 puy de dôme" />
               </div>
-              <FlipdownTimer />
             </div>
+            <FlipdownTimer />
 
             <div className={styles.contentRow}>
               <div className={styles.textBlock}>
