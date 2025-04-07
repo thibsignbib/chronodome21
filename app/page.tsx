@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       )}
 
-      <main>
+    
         <section className={styles.hero}>
           <div className={styles.slideshow}>
             <div className={`${styles.slide} ${styles.slide1}`}></div>
@@ -150,9 +150,6 @@ export default function Home() {
             <p>&copy; 2025 Chronodôme 2.1. Tous droits réservés.</p>
           </div>
         </footer> 
-
-        </section>
-      </main>
     </div>
   );
 }
