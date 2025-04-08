@@ -5,7 +5,7 @@ import styles from '../page.module.css';
 export default function CreditsPage() {
   return (
     <div className={styles.shortPage}>
-      <Navbar />
+      <Navbar darkBackground />
       <main className={styles.contentSection}>
             <div className={styles.contentRow}>
               <div className={styles.textBlock}>
