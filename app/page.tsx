@@ -110,7 +110,7 @@ export default function Home() {
                   <p>
                     Un stand de ravitaillement sera présent au départ de la boucle, avec plein de délices sucrés et salés qui n'attendent que vous ! Une paella sera également proposée de 12h à 17h le dimanche 8 juin, au prix de 10€ la (grosse) barquette.
                   </p>
-              </div>
+            </div>
               <div className={styles.imageBlock}>
               <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2733.6829172977566!2d2.9333062!3d45.774131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDQ2JzI2LjkiTiAywrA1NicxMS41IkU!5e0!3m2!1sfr!2sfr!4v1700000000000"
@@ -137,7 +137,8 @@ export default function Home() {
                   <FaEuroSign /> Faire un don
                 </a>
               </div>
-            </div>   
+            </div> 
+          </main>  
 
         <footer className={styles.footer}>
           <div className={styles.footerContent}>
