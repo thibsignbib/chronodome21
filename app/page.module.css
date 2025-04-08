@@ -512,6 +512,10 @@
     margin: 0 auto;
     padding: 2rem 1rem 1rem;
   }
+
+  .partnerTextBlock p{
+    margin-top: 1rem;
+  }
   
   .partnerRow {
     display: flex;
