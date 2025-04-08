@@ -272,6 +272,10 @@
         display: block;
         margin: 0 auto;
       }
+
+      .imageBlock iframe{
+        height: 300px;
+      }
     }
     
 
