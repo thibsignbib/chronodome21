@@ -327,7 +327,7 @@
     backdrop-filter: blur(6px);
   }
 
-  .darkNavbar {
+  .navbar .darkNavbar {
     background: rgba(0, 0, 0, 0.75);
     color: white;
   }
