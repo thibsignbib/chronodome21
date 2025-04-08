@@ -10,7 +10,6 @@ export default function CreditsPage() {
             <div className={styles.contentRow}>
               <div className={styles.textBlock}>
                 <br />
-                <br />
                 <h1>Photos</h1>
                 <br />
                 <p>
