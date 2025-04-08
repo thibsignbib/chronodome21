@@ -504,3 +504,36 @@
     margin-top: 1rem;
     margin-bottom: 0.5 rem;
   }
+
+  .partnerTextBlock {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2rem 1rem 1rem;
+  }
+  
+  .partnerRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 1rem auto 4rem;
+    padding: 0 1rem;
+  }
+  
+  .partnerRow img {
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+  
+  .partnerRow img:hover {
+    filter: grayscale(0%);
+  }
+  

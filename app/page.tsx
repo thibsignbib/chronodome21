@@ -16,19 +16,19 @@ export default function Home() {
       {/* Navigation */}
       <nav className={styles.navbar}>
         <div className={styles.desktopMenu}>
-          <a href="https://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" target="_blank" rel="noopener noreferrer">
+          <a href="#concept" target="_blank" rel="noopener noreferrer">
           <LuLightbulb /> Concept
           </a>
-          <a href="https://pots.lydia.me/collect/pots?id=71624-chronodome-2-1" target="_blank" rel="noopener noreferrer">
+          <a href="#inscription" target="_blank" rel="noopener noreferrer">
             <LuPlus /> Inscription
           </a>
-          <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
+          <a href="#don" target="_blank" rel="noopener noreferrer">
             <LuEuro /> Faire un don
           </a>
           <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
             <FaInstagram /> News
           </a>
-          <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
+          <a href="#partenaires" target="_blank" rel="noopener noreferrer">
             <SiGithubsponsors /> Partenaires
           </a>
           <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
@@ -78,7 +78,7 @@ export default function Home() {
           <main>
             <section id="content" className={styles.contentSection}>
             
-            <div className={styles.contentRow}>
+            <div id="concept" className={styles.contentRow}>
               <div className={styles.textBlock}>
                 <h1>Concept</h1>
                 <br />
@@ -124,12 +124,31 @@ export default function Home() {
               </div>
             </div>
 
-            <div className={styles.contentRow}>
+            <div id="inscription" className={styles.contentRow}>
               <div className={styles.textBlock}>
                   <h1>Inscription</h1>
                   <br />
                   <p>
-                    Vous pouvez récupérer votre dossard en vous présentant simplement au départ, le jour de l'événement. L'inscription étant gratuite, apporter une petite contribution sucrée ou salée pour le ravitaillement (gateau, chips, bonbons, fruits, etc.) nous aiderait beaucoup ! Nous vous proposons également de contribuer via un don libre à l'organisation, dont l'intégralité des bénéfices reviendra à l'association Trisomie 21 Puy de Dôme.
+                    Vous pouvez récupérer votre dossard en vous présentant simplement au départ, le jour de l'événement. L'inscription étant en prix libre (voir paragraphe "faire un don"), apporter une petite contribution sucrée ou salée pour le ravitaillement (gateau, chips, bonbons, fruits, etc.) nous aiderait beaucoup ! 
+                  </p>
+              </div>
+              <div className={styles.imageBlock}>
+                <a href="ttps://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" className={styles.buttonContent} target="_blank" rel="noopener noreferrer">
+                  <FaEuroSign /> S'inscrire
+                </a>
+              </div>
+            </div> 
+
+            <div id="don" className={styles.contentRow}>
+              <div className={styles.textBlock}>
+                  <h1>Faire un don</h1>
+                  <br />
+                  <p>
+                    Nous vous proposons de réaliser avant ou pendant l'événement, un don libre à l'organisation, dont l'intégralité des bénéfices reviendra à l'association Trisomie 21 Puy de Dôme. 
+                  </p>
+                  <br />
+                  <p>
+                    Pour accentuer le challenge, beaucoup de participants se fixent un montant de don au kilomètre et essaient d'en faire un maximum ! 
                   </p>
               </div>
               <div className={styles.imageBlock}>
@@ -138,6 +157,21 @@ export default function Home() {
                 </a>
               </div>
             </div> 
+
+            <div id="partenaires" className={styles.contentRow}>
+              <div className={styles.partnerTextBlock}>
+                <h1>Partenaires</h1>
+                <p>
+                  Merci à nos partenaires qui soutiennent l'événement et qui nous permettent de monter en gamme cette année ❤️
+                </p>
+              </div>
+            </div>
+
+            <div className={styles.partnerRow}>
+              <img src="/images/running_conseil.jpg" alt="Running conseil" />
+              <img src="/images/running_conseil.jpg" alt="Running conseil" />
+              <img src="/images/running_conseil.jpg" alt="Running conseil" />
+            </div>
             </section>
           </main>  
 
