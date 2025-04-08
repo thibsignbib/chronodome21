@@ -6,27 +6,32 @@ import styles from './page.module.css';
 import { FaInstagram, FaBars  } from 'react-icons/fa';
 import { LuLightbulb, LuCamera, LuEuro, LuPlus   } from "react-icons/lu";
 import { SiGithubsponsors } from "react-icons/si";
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const pathname = usePathname();
+    const isHome = pathname === '/';
+  
+    const getLinkHref = (hash: string) => (isHome ? `#${hash}` : `/#${hash}`);
   
     return (
       <>
         <nav className={styles.navbar}>
             <div className={styles.desktopMenu}>
-                <Link href="/#concept">
+                <Link href={getLinkHref('concept')} scroll={true}>
                     <LuLightbulb /> Concept
                 </Link>
-                <Link href="/#inscription">
+                <Link href={getLinkHref('inscription')} scroll={true}>
                     <LuPlus /> Inscription
                 </Link>
-                <Link href="/#don">
+                <Link href={getLinkHref('don')} scroll={true}>
                     <LuEuro /> Faire un don
                 </Link>
                 <a href="https://www.instagram.com/semelle_o_monde/">
                     <FaInstagram /> News
                 </a>
-                <Link href="/#partenaires">
+                <Link href={getLinkHref('partenaires')} scroll={true}>
                     <SiGithubsponsors /> Partenaires
                 </Link>
                 <Link href="/credits">
