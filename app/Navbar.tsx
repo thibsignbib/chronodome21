@@ -11,9 +11,12 @@ import { usePathname } from 'next/navigation';
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const pathname = usePathname();
-    const isHome = pathname === '/';
+    const isHome = pathname.startsWith('/');
   
-    const getLinkHref = (hash: string) => (isHome ? `#${hash}` : `/#${hash}`);
+    const getLinkHref = (hash: string) => {
+        return isHome ? `#${hash}` : `/#${hash}`;
+      };
+      
   
     return (
       <>
