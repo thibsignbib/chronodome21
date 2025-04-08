@@ -133,6 +133,9 @@ export default function Home() {
               <a href="https://www.volvic.fr/" target="_blank" rel="noopener noreferrer">
                 <img src="/images/volvic.jpg" alt="Volvic" />
               </a>
+              <a href="https://www.decathlon.fr/store-view/magasin-de-sports-lempdes-essentiel-0070112901129" target="_blank" rel="noopener noreferrer">
+                <img src="/images/decathlon.png" alt="Décathlon Lempdes" />
+              </a>
             </div>
             </section>
           </main>  
