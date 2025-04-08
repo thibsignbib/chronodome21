@@ -100,10 +100,16 @@ export default function Home() {
 
             <div className={styles.contentRow}>
             <div className={styles.textBlock}>
-                <h1>Emplacement du parking et du départ</h1>
+                <h3>Emplacement du parking et du départ</h3>
                 <p>
                 Quand vous venez de Clermont depuis le col de ceyssat, continuez en direction de Ceyssat et jusqu'à une entrée de chemin signalée par des ballons et rubalises. Tournez sur votre droite, puis suivez la rubalise jusqu'au monument "des fusillés ardents".
               </p>
+              <br />
+              <h3>Restauration</h3>
+                  <br />
+                  <p>
+                    Un stand de ravitaillement sera présent au départ de la boucle, avec plein de délices sucrés et salés qui n'attendent que vous ! Une paella sera également proposée de 12h à 17h le dimanche 8 juin, au prix de 10€ la (grosse) barquette.
+                  </p>
               </div>
               <div className={styles.imageBlock}>
               <iframe
@@ -131,26 +137,7 @@ export default function Home() {
                   <FaEuroSign /> Faire un don
                 </a>
               </div>
-            </div>
-
-            
-
-            <div className={styles.contentRow}>
-              <div className={styles.textBlock}>
-                  <h1>Restauration</h1>
-                  <br />
-                  <p>
-                    Un stand de ravitaillement sera présent au départ de la boucle, avec plein de délices sucrés et salés qui n'attendent que vous ! Une paella sera également proposée de 12h à 17h le dimanche 8 juin, au prix de 10€ la (grosse) barquette.
-                  </p>
-              </div>
-              <div className={styles.imageBlock}>
-              <a href="https://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" className={styles.buttonContent} target="_blank" rel="noopener noreferrer">
-                  <FaPlus /> Ok tu m'as convaincu, je m'inscris !!
-                </a>
-              </div>
-            </div>
-          </section>
-          </main>        
+            </div>   
 
         <footer className={styles.footer}>
           <div className={styles.footerContent}>
