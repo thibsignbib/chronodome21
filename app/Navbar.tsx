@@ -8,7 +8,11 @@ import { LuLightbulb, LuCamera, LuEuro, LuPlus   } from "react-icons/lu";
 import { SiGithubsponsors } from "react-icons/si";
 import { usePathname } from 'next/navigation';
 
-export default function Navbar() {
+interface NavbarProps {
+    darkBackground?: boolean;
+  }
+
+export default function Navbar({ darkBackground = false }: NavbarProps) {
     const [menuOpen, setMenuOpen] = useState(false);
     const pathname = usePathname();
     const isHome = pathname === '/' || pathname === '';
@@ -16,11 +20,12 @@ export default function Navbar() {
     const getLinkHref = (hash: string) => {
         return isHome ? `#${hash}` : `/#${hash}`;
       };
-      
+    
+    const navbarClass = `${styles.navbar} ${darkBackground ? styles.darkNavbar : ''}`;
   
     return (
       <>
-        <nav className={styles.navbar}>
+        <nav className={navbarClass}>
             <div className={styles.desktopMenu}>
                 <a href={getLinkHref('concept')}>
                     <LuLightbulb /> Concept

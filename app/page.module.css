@@ -326,6 +326,11 @@
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(6px);
   }
+
+  .darkNavbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
   
   .logo {
     font-family: 'TitleFont', sans-serif;
