@@ -2,59 +2,17 @@
 
 import { useState } from 'react';
 import styles from './page.module.css';
-import { FaPlus, FaEuroSign, FaInstagram, FaBars  } from 'react-icons/fa';
-import { LuLightbulb, LuCamera, LuEuro, LuPlus   } from "react-icons/lu";
-import { SiGithubsponsors } from "react-icons/si";
+import { FaEuroSign } from 'react-icons/fa';
 import { BsChevronDown } from 'react-icons/bs';
 import FlipdownTimer from './FlipdownTimer';
+import Navbar from './components/Navbar';
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div>
-      {/* Navigation */}
-      <nav className={styles.navbar}>
-        <div className={styles.desktopMenu}>
-          <a href="#concept" target="_blank" rel="noopener noreferrer">
-          <LuLightbulb /> Concept
-          </a>
-          <a href="#inscription" target="_blank" rel="noopener noreferrer">
-            <LuPlus /> Inscription
-          </a>
-          <a href="#don" target="_blank" rel="noopener noreferrer">
-            <LuEuro /> Faire un don
-          </a>
-          <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
-            <FaInstagram /> News
-          </a>
-          <a href="#partenaires" target="_blank" rel="noopener noreferrer">
-            <SiGithubsponsors /> Partenaires
-          </a>
-          <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
-            <LuCamera /> Crédits
-          </a>
-
-        </div>
-        <button className={styles.burger} onClick={() => setMenuOpen(!menuOpen)}>
-          <FaBars />
-        </button>
-      </nav>
-
-      {menuOpen && (
-        <div className={styles.mobileMenu}>
-          <a href="https://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" target="_blank" rel="noopener noreferrer">
-            <FaPlus /> Concept
-          </a>
-          <a href="https://pots.lydia.me/collect/pots?id=71624-chronodome-2-1" target="_blank" rel="noopener noreferrer">
-            <FaEuroSign /> Faire un don
-          </a>
-          <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
-            <FaInstagram /> Instagram
-          </a>
-        </div>
-      )}
-
+      <Navbar />
     
         <section className={styles.hero}>
           <div className={styles.slideshow}>
@@ -168,9 +126,6 @@ export default function Home() {
             </div>
 
             <div className={styles.partnerRow}>
-              <a href="https://www.running-conseil.com/runningconseil-cournon-dauvergne.html" target="_blank" rel="noopener noreferrer">
-                <img src="/images/running_conseil.jpg" alt="Running conseil" />
-              </a>
               <a href="https://www.running-conseil.com/runningconseil-cournon-dauvergne.html" target="_blank" rel="noopener noreferrer">
                 <img src="/images/running_conseil.jpg" alt="Running conseil" />
               </a>
