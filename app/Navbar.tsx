@@ -13,22 +13,22 @@ export default function Navbar() {
       <>
         <nav className={styles.navbar}>
             <div className={styles.desktopMenu}>
-                <a href="#concept" target="_blank" rel="noopener noreferrer">
+                <a href="#concept">
                 <LuLightbulb /> Concept
                 </a>
-                <a href="#inscription" target="_blank" rel="noopener noreferrer">
+                <a href="#inscription">
                     <LuPlus /> Inscription
                 </a>
-                <a href="#don" target="_blank" rel="noopener noreferrer">
+                <a href="#don">
                     <LuEuro /> Faire un don
                 </a>
-                <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/semelle_o_monde/">
                     <FaInstagram /> News
                 </a>
-                <a href="#partenaires" target="_blank" rel="noopener noreferrer">
+                <a href="#partenaires">
                     <SiGithubsponsors /> Partenaires
                 </a>
-                <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/semelle_o_monde/">
                     <LuCamera /> Crédits
                 </a>
             </div>

@@ -6,6 +6,7 @@ import { FaEuroSign } from 'react-icons/fa';
 import { BsChevronDown } from 'react-icons/bs';
 import FlipdownTimer from './FlipdownTimer';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -133,11 +134,7 @@ export default function Home() {
             </section>
           </main>  
 
-        <footer className={styles.footer}>
-          <div className={styles.footerContent}>
-            <p>&copy; 2025 Chronodôme 2.1. Tous droits réservés.</p>
-          </div>
-        </footer> 
+          <Footer />
     </div>
   );
 }
