@@ -14,7 +14,7 @@ export default function Navbar() {
         <nav className={styles.navbar}>
             <div className={styles.desktopMenu}>
                 <a href="#concept">
-                <LuLightbulb /> Concept
+                    <LuLightbulb /> Concept
                 </a>
                 <a href="#inscription">
                     <LuPlus /> Inscription
@@ -28,7 +28,7 @@ export default function Navbar() {
                 <a href="#partenaires">
                     <SiGithubsponsors /> Partenaires
                 </a>
-                <a href="https://www.instagram.com/semelle_o_monde/">
+                <a href="/credits">
                     <LuCamera /> Crédits
                 </a>
             </div>
@@ -40,15 +40,24 @@ export default function Navbar() {
 
         {menuOpen && (
             <div className={styles.mobileMenu}>
-            <a href="https://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" target="_blank" rel="noopener noreferrer">
-                <FaPlus /> Concept
-            </a>
-            <a href="https://pots.lydia.me/collect/pots?id=71624-chronodome-2-1" target="_blank" rel="noopener noreferrer">
-                <FaEuroSign /> Faire un don
-            </a>
-            <a href="https://www.instagram.com/semelle_o_monde/" target="_blank" rel="noopener noreferrer">
-                <FaInstagram /> Instagram
-            </a>
+                <a href="#concept">
+                    <LuLightbulb /> Concept
+                </a>
+                <a href="#inscription">
+                    <LuPlus /> Inscription
+                </a>
+                <a href="#don">
+                    <LuEuro /> Faire un don
+                </a>
+                <a href="https://www.instagram.com/semelle_o_monde/">
+                    <FaInstagram /> News
+                </a>
+                <a href="#partenaires">
+                    <SiGithubsponsors /> Partenaires
+                </a>
+                <a href="/credits">
+                    <LuCamera /> Crédits
+                </a>
             </div>
         )}
         </>
