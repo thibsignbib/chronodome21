@@ -168,9 +168,12 @@ export default function Home() {
             </div>
 
             <div className={styles.partnerRow}>
-              <img src="/images/running_conseil.jpg" alt="Running conseil" />
-              <img src="/images/running_conseil.jpg" alt="Running conseil" />
-              <img src="/images/running_conseil.jpg" alt="Running conseil" />
+              <a href="https://www.running-conseil.com/runningconseil-cournon-dauvergne.html" target="_blank" rel="noopener noreferrer">
+                <img src="/images/running_conseil.jpg" alt="Running conseil" />
+              </a>
+              <a href="https://www.running-conseil.com/runningconseil-cournon-dauvergne.html" target="_blank" rel="noopener noreferrer">
+                <img src="/images/running_conseil.jpg" alt="Running conseil" />
+              </a>
             </div>
             </section>
           </main>  
