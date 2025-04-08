@@ -49,24 +49,24 @@ export default function Navbar() {
 
         {menuOpen && (
             <div className={styles.mobileMenu}>
-                <Link href="/#concept">
+                <a href={getLinkHref('concept')}>
                     <LuLightbulb /> Concept
-                </Link>
-                <Link href="/#inscription">
+                </a>
+                <a href={getLinkHref('inscription')}>
                     <LuPlus /> Inscription
-                </Link>
-                <Link href="/#don">
+                </a>
+                <a href={getLinkHref('don')}>
                     <LuEuro /> Faire un don
-                </Link>
+                </a>
                 <a href="https://www.instagram.com/semelle_o_monde/">
                     <FaInstagram /> News
                 </a>
-                <Link href="/#partenaires">
+                <a href={getLinkHref('partenaires')}>
                     <SiGithubsponsors /> Partenaires
-                </Link>
-                <Link href="/credits">
+                </a>
+                <a href="/credits">
                     <LuCamera /> Crédits
-                </Link>
+                </a>
             </div>
         )}
         </>

@@ -42,10 +42,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+       {children}
       </body>
     </html>
   );
