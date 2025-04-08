@@ -22,19 +22,19 @@ export default function Navbar() {
       <>
         <nav className={styles.navbar}>
             <div className={styles.desktopMenu}>
-                <Link href={getLinkHref('concept')} scroll={true}>
+                <Link href={getLinkHref('concept')} scroll={false}>
                     <LuLightbulb /> Concept
                 </Link>
-                <Link href={getLinkHref('inscription')} scroll={true}>
+                <Link href={getLinkHref('inscription')} scroll={false}>
                     <LuPlus /> Inscription
                 </Link>
-                <Link href={getLinkHref('don')} scroll={true}>
+                <Link href={getLinkHref('don')} scroll={false}>
                     <LuEuro /> Faire un don
                 </Link>
                 <a href="https://www.instagram.com/semelle_o_monde/">
                     <FaInstagram /> News
                 </a>
-                <Link href={getLinkHref('partenaires')} scroll={true}>
+                <Link href={getLinkHref('partenaires')} scroll={false}>
                     <SiGithubsponsors /> Partenaires
                 </Link>
                 <Link href="/credits">
