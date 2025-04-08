@@ -130,6 +130,9 @@ export default function Home() {
               <a href="https://www.running-conseil.com/runningconseil-cournon-dauvergne.html" target="_blank" rel="noopener noreferrer">
                 <img src="/images/running_conseil.jpg" alt="Running conseil" />
               </a>
+              <a href="https://www.volvic.fr/" target="_blank" rel="noopener noreferrer">
+                <img src="/images/volvic.jpg" alt="Volvic" />
+              </a>
             </div>
             </section>
           </main>  
