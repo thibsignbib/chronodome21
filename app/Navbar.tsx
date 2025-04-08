@@ -1,8 +1,9 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import styles from './page.module.css';
-import { FaPlus, FaEuroSign, FaInstagram, FaBars  } from 'react-icons/fa';
+import { FaInstagram, FaBars  } from 'react-icons/fa';
 import { LuLightbulb, LuCamera, LuEuro, LuPlus   } from "react-icons/lu";
 import { SiGithubsponsors } from "react-icons/si";
 
@@ -13,24 +14,24 @@ export default function Navbar() {
       <>
         <nav className={styles.navbar}>
             <div className={styles.desktopMenu}>
-                <a href="#concept">
+                <Link href="/#concept">
                     <LuLightbulb /> Concept
-                </a>
-                <a href="#inscription">
+                </Link>
+                <Link href="/#inscription">
                     <LuPlus /> Inscription
-                </a>
-                <a href="#don">
+                </Link>
+                <Link href="/#don">
                     <LuEuro /> Faire un don
-                </a>
+                </Link>
                 <a href="https://www.instagram.com/semelle_o_monde/">
                     <FaInstagram /> News
                 </a>
-                <a href="#partenaires">
+                <Link href="/#partenaires">
                     <SiGithubsponsors /> Partenaires
-                </a>
-                <a href="/credits">
+                </Link>
+                <Link href="/credits">
                     <LuCamera /> Crédits
-                </a>
+                </Link>
             </div>
 
             <button className={styles.burger} onClick={() => setMenuOpen(!menuOpen)}>
@@ -40,24 +41,24 @@ export default function Navbar() {
 
         {menuOpen && (
             <div className={styles.mobileMenu}>
-                <a href="#concept">
+                <Link href="/#concept">
                     <LuLightbulb /> Concept
-                </a>
-                <a href="#inscription">
+                </Link>
+                <Link href="/#inscription">
                     <LuPlus /> Inscription
-                </a>
-                <a href="#don">
+                </Link>
+                <Link href="/#don">
                     <LuEuro /> Faire un don
-                </a>
+                </Link>
                 <a href="https://www.instagram.com/semelle_o_monde/">
                     <FaInstagram /> News
                 </a>
-                <a href="#partenaires">
+                <Link href="/#partenaires">
                     <SiGithubsponsors /> Partenaires
-                </a>
-                <a href="/credits">
+                </Link>
+                <Link href="/credits">
                     <LuCamera /> Crédits
-                </a>
+                </Link>
             </div>
         )}
         </>
