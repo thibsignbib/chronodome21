@@ -536,4 +536,13 @@
   .partnerRow img:hover {
     filter: grayscale(0%);
   }
+
+  .partnerRow a {
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+  
+  .partnerRow a:hover {
+    transform: scale(1.05);
+  }
   
