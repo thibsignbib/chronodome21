@@ -5,7 +5,7 @@ import styles from './page.module.css';
 import { FaEuroSign } from 'react-icons/fa';
 import { BsChevronDown } from 'react-icons/bs';
 import FlipdownTimer from './FlipdownTimer';
-import Navbar from './components/Navbar';
+import Navbar from './Navbar';
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
