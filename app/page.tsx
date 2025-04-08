@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import styles from './page.module.css';
-import { FaEuroSign } from 'react-icons/fa';
+import { FaPlus, FaEuroSign } from 'react-icons/fa';
 import { BsChevronDown } from 'react-icons/bs';
 import FlipdownTimer from './FlipdownTimer';
 import Navbar from './Navbar';
@@ -93,7 +93,7 @@ export default function Home() {
               </div>
               <div className={styles.imageBlock}>
                 <a href="ttps://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" className={styles.buttonContent} target="_blank" rel="noopener noreferrer">
-                  <FaEuroSign /> S'inscrire
+                  <FaPlus /> S'inscrire
                 </a>
               </div>
             </div> 
