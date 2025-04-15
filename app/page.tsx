@@ -92,7 +92,7 @@ export default function Home() {
                   </p>
               </div>
               <div className={styles.imageBlock}>
-                <a href="ttps://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" className={styles.buttonContent} target="_blank" rel="noopener noreferrer">
+                <a href="https://doodle.com/sign-up-sheet/participate/2e77d6a5-d2b8-49dc-94ab-eea3224209fd/select" className={styles.buttonContent} target="_blank" rel="noopener noreferrer">
                   <FaPlus /> S'inscrire
                 </a>
               </div>
