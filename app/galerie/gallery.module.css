@@ -10,6 +10,13 @@
     margin-bottom: 2rem;
     font-weight: 600;
   }
+
+  .galleryIntro{
+    width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+  }
   
   .galleryGrid {
     column-count: 3;
@@ -44,5 +51,9 @@
     .galleryGrid {
       column-count: 1;
     }
+
+    .galleryIntro{
+        width: 100%;
   }
+}
   
