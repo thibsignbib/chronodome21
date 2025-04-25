@@ -24,7 +24,7 @@ export default function GalleryPage() {
       <main className={galleryStyles.contentSectionGallery}>
         <h1 className={galleryStyles.galleryTitle}>Votre impact 💖</h1>
         <p className={galleryStyles.galleryIntro}>
-          L'édition 2025 de la Chronodôme 21 avait permis de faire un don de 3326€ à l'association Trisomie 21 Puy-de-dôme. Les bénéficiaires de l'association avaient, grâce à ce don, pu réaliser différentes activités sportives et ludiques comme de la plongée !
+          L'édition 2024 de la Chronodôme 21 avait permis de faire un don de 3326€ à l'association Trisomie 21 Puy-de-dôme. Les bénéficiaires de l'association avaient, grâce à ce don, pu réaliser différentes activités sportives et ludiques comme de la plongée !
         </p>
         <section className={galleryStyles.gallerySection}>
           <div className={galleryStyles.galleryGrid}>
