@@ -3,6 +3,7 @@
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import styles from "../page.module.css";
+import galleryStyles from "./gallery.module.css";
 
 const images = [
   "/images/gallery/photo1.jpg",
@@ -21,15 +22,15 @@ export default function GalleryPage() {
   return (
     <div className={styles.shortPage}>
       <Navbar />
-      <main className={styles.gallerySection}>
-        <h1 className={styles.galleryTitle}>Galerie photos</h1>
-        <p className={styles.galleryIntro}>
+      <main className={galleryStyles.gallerySection}>
+        <h1 className={galleryStyles.galleryTitle}>Galerie photos</h1>
+        <p className={galleryStyles.galleryIntro}>
           Quelques souvenirs de l'édition précédente et d'autres instants partagés autour de la Chronodôme.
         </p>
-        <div className={styles.galleryGrid}>
+        <div className={galleryStyles.galleryGrid}>
           {images.map((src, index) => (
-            <div className={styles.galleryItem} key={index}>
-              <img src={src} alt={`Photo ${index + 1}`} className={styles.galleryImage} />
+            <div className={galleryStyles.galleryItem} key={index}>
+              <img src={src} alt={`Photo ${index + 1}`} className={galleryStyles.galleryImage} />
             </div>
           ))}
         </div>
