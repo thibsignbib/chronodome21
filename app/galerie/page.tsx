@@ -14,26 +14,26 @@ const images = [
   "/images/gallery/photo6.jpg",
   "/images/gallery/photo7.jpg",
   "/images/gallery/photo8.jpg",
-  "/images/gallery/photo9.jpg",
-  // Ajoute autant d'images que tu veux
+  "/images/gallery/photo9.jpg"
 ];
 
 export default function GalleryPage() {
   return (
     <div className={styles.shortPage}>
-      <Navbar />
-      <main className={galleryStyles.gallerySection}>
-        <h1 className={galleryStyles.galleryTitle}>Galerie photos</h1>
+      <Navbar darkBackground />
+      <main className={styles.contentSection}>
+        <h1 className={galleryStyles.galleryTitle}>Votre impact 💖</h1>
         <p className={galleryStyles.galleryIntro}>
-          Quelques souvenirs de l'édition précédente et d'autres instants partagés autour de la Chronodôme.
+          L'édition 2025 de la Chronodôme 21 avait permis de faire un don de 3326€ à l'association Trisomie 21 Puy-de-dôme. Les bénéficiaires de l'association avaient, grâce à ce don, pu réaliser différentes activités sportives et ludiques comme de la plongée !
         </p>
-        <div className={galleryStyles.galleryGrid}>
-          {images.map((src, index) => (
-            <div className={galleryStyles.galleryItem} key={index}>
-              <img src={src} alt={`Photo ${index + 1}`} className={galleryStyles.galleryImage} />
-            </div>
-          ))}
-        </div>
+        <section className={galleryStyles.gallerySection}>
+          <h1 className={galleryStyles.galleryTitle}>Galerie Photo</h1>
+          <div className={galleryStyles.galleryGrid}>
+            {images.map((src, i) => (
+              <img key={i} src={src} alt={`photo-${i}`} className={galleryStyles.galleryImage} />
+            ))}
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
