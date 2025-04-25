@@ -109,6 +109,10 @@ export default function Home() {
                   <p>
                     Pour accentuer le challenge, beaucoup de participants se fixent un montant de don au kilomètre et essaient d'en faire un maximum ! 
                   </p>
+                  <br />
+                  <p>
+                    Retrouvez dans l'onglet "Impact" les activités réalisés grâce aux bénéfices de l'édition 2024 de la Chronodôme 21.
+                  </p>
               </div>
               <div className={styles.imageBlock}>
                 <a href="https://pots.lydia.me/collect/pots?id=71624-chronodome-2-1&fbclid=IwZXh0bgNhZW0CMTAAAR0s0ZyZlPr_sNZA7milhHObpNjSjEUxTZ2KIT3oL" className={styles.buttonContent} target="_blank" rel="noopener noreferrer">

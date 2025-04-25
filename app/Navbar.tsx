@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import styles from './page.module.css';
 import { FaInstagram, FaBars  } from 'react-icons/fa';
-import { LuLightbulb, LuCamera, LuEuro, LuPlus   } from "react-icons/lu";
+import { LuLightbulb, LuCamera, LuEuro, LuPlus, LuHeartHandshake   } from "react-icons/lu";
 import { SiGithubsponsors } from "react-icons/si";
 import { usePathname } from 'next/navigation';
 
@@ -42,6 +42,9 @@ export default function Navbar({ darkBackground = false }: NavbarProps) {
                 <a href={getLinkHref('partenaires')}>
                     <SiGithubsponsors /> Partenaires
                 </a>
+                <a href="/galerie">
+                    <LuHeartHandshake /> Impact
+                </a>
                 <a href="/credits">
                     <LuCamera /> Crédits
                 </a>
@@ -68,6 +71,9 @@ export default function Navbar({ darkBackground = false }: NavbarProps) {
                 </a>
                 <a href={getLinkHref('partenaires')}>
                     <SiGithubsponsors /> Partenaires
+                </a>
+                <a href="/galerie">
+                    <LuHeartHandshake /> Impact
                 </a>
                 <a href="/credits">
                     <LuCamera /> Crédits
