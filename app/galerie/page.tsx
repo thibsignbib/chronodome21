@@ -21,13 +21,12 @@ export default function GalleryPage() {
   return (
     <div className={styles.shortPage}>
       <Navbar darkBackground />
-      <main className={galleryStyles.contentSection}>
+      <main className={galleryStyles.contentSectionGallery}>
         <h1 className={galleryStyles.galleryTitle}>Votre impact 💖</h1>
         <p className={galleryStyles.galleryIntro}>
           L'édition 2025 de la Chronodôme 21 avait permis de faire un don de 3326€ à l'association Trisomie 21 Puy-de-dôme. Les bénéficiaires de l'association avaient, grâce à ce don, pu réaliser différentes activités sportives et ludiques comme de la plongée !
         </p>
         <section className={galleryStyles.gallerySection}>
-          <h1 className={galleryStyles.galleryTitle}>Galerie Photo</h1>
           <div className={galleryStyles.galleryGrid}>
             {images.map((src, i) => (
               <img key={i} src={src} alt={`photo-${i}`} className={galleryStyles.galleryImage} />

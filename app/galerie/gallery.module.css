@@ -25,9 +25,9 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
-  .contentSection {
+  .contentSectionGallery {
     padding: 2rem;
-    margin-top: 6rem;
+    padding-top: 6rem;
     background-color: #fff;
     color: #333;
     text-align: center;
