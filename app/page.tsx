@@ -4,9 +4,9 @@ import { useState } from 'react';
 import styles from './page.module.css';
 import { FaPlus, FaEuroSign } from 'react-icons/fa';
 import { BsChevronDown } from 'react-icons/bs';
-import FlipdownTimer from './FlipdownTimer';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import FlipdownTimer from '../components/FlipdownTimer';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);

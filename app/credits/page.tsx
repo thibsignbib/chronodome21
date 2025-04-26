@@ -1,5 +1,5 @@
-import Navbar from '../Navbar';
-import Footer from '../Footer';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 import styles from '../page.module.css';
 
 export default function CreditsPage() {
