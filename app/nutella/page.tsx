@@ -1,29 +1,14 @@
-'use client'
-
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { useSession } from '@supabase/auth-helpers-react'
+import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
+import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
 import LogoutButton from '@/components/LogoutButton'
 
-export default function NutellaAdminPage() {
-  const session = useSession()
-  const router = useRouter()
-  const [loading, setLoading] = useState(true)
+export default async function NutellaAdminPage() {
+  const supabase = createServerComponentClient({ cookies })
+  const { data: { session } } = await supabase.auth.getSession()
 
-  useEffect(() => {
-    if (session === null) {
-      router.push('/nutella/login')
-    } else if (session !== undefined) {
-      setLoading(false)
-    }
-  }, [session, router])
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <p>Chargement...</p>
-      </div>
-    )
+  if (!session) {
+    redirect('/nutella/login')
   }
 
   return (
