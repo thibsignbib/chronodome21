@@ -32,22 +32,24 @@ export default function NutellaLogin() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-pink-100 to-amber-100 px-4">
       <div className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center mb-6 text-amber-700">Connexion Nutella 🍫</h1>
+        <h1 className="text-3xl font-bold text-center mb-6 text-amber-700">Connexion</h1>
         <form onSubmit={handleLogin} className="flex flex-col gap-4">
-          <input
+        <input
             type="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-400"
-          />
-          <input
+            className="p-3 rounded-lg border border-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-amber-400"
+            />
+
+        <input
             type="password"
             placeholder="Mot de passe"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-400"
-          />
+            className="p-3 rounded-lg border border-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-amber-400"
+            />
+
           <button
             type="submit"
             className="p-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-lg transition duration-200 disabled:bg-amber-300"
