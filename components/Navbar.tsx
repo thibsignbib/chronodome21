@@ -1,8 +1,7 @@
 'use client';
 
-import Link from 'next/link';
 import { useState } from 'react';
-import styles from './page.module.css';
+import styles from '@/app/page.module.css';
 import { FaInstagram, FaBars  } from 'react-icons/fa';
 import { LuLightbulb, LuCamera, LuEuro, LuPlus, LuHeartHandshake   } from "react-icons/lu";
 import { SiGithubsponsors } from "react-icons/si";

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import styles from './page.module.css';
+import styles from '@/app/page.module.css';
 
 export default function Footer() {
     const [menuOpen, setMenuOpen] = useState(false);
