@@ -50,7 +50,7 @@ const articleTypes = [
 export default function CreateArticleForm() {
   const [type, setType] = useState('text')
   const [title, setTitle] = useState('')
-  const [content, setContent] = useState('')
+  const [text, setContent] = useState('')
   const [images, setImages] = useState<FileList | null>(null)
   const supabase = useSupabaseClient()
 
