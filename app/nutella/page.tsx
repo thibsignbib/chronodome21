@@ -2,6 +2,7 @@ import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import LogoutButton from '@/components/LogoutButton'
+import CreateArticleForm from '@/components/CreateArticleForm'
 
 export default async function NutellaAdminPage() {
   const supabase = createServerComponentClient({ cookies })
@@ -16,6 +17,7 @@ export default async function NutellaAdminPage() {
       <LogoutButton />
       <h1 className="text-2xl mb-4">Bienvenue sur Nutella Admin 🍫</h1>
       <p>Ici tu pourras créer des articles !</p>
+      <CreateArticleForm />
     </div>
   )
 }
