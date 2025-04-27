@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { Upload } from 'lucide-react'
 
 const articleTypes = [
     { 
@@ -116,21 +117,7 @@ export default function CreateArticleForm() {
         className="flex flex-col items-center justify-center w-full h-40 border-2 border-dashed border-amber-400 rounded-lg cursor-pointer hover:bg-amber-50 transition"
     >
         <div className="flex flex-col items-center justify-center pt-5 pb-6">
-        <svg
-            aria-hidden="true"
-            className="w-10 h-10 mb-3 text-amber-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M7 16V4m0 0L3 8m4-4l4 4M3 16h18"
-            ></path>
-        </svg>
+        <Upload className="w-10 h-10 text-amber-400" />
         <p className="mb-2 text-sm text-gray-500">Clique ici pour importer</p>
         <p className="text-xs text-gray-400">PNG, JPG jusqu'à 10MB</p>
         </div>

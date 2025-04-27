@@ -17,7 +17,7 @@ export default async function NutellaAdminPage() {
       <LogoutButton />
       <div className="max-w-2xl mx-auto text-center mt-12">
         <h1 className="text-4xl font-extrabold text-amber-700 mb-4">
-          Bienvenue sur l'interface admin du site Chronodôme 21!
+          Interface admin Chronodôme
         </h1>
         <p className="text-lg text-gray-700 mb-8 leading-relaxed">
           Ici tu peux écrire un nouvel article de news ou éditer les précédents !
