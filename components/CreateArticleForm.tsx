@@ -50,7 +50,7 @@ const articleTypes = [
 export default function CreateArticleForm() {
   const [type, setType] = useState('text')
   const [title, setTitle] = useState('')
-  const [text, setText] = useState('')
+  const [content, setContent] = useState('')
   const [images, setImages] = useState<FileList | null>(null)
   const supabase = useSupabaseClient()
 
@@ -78,7 +78,7 @@ export default function CreateArticleForm() {
       // Reset du formulaire
       setType('text')
       setTitle('')
-      setText('')
+      setContent('')
       setImages(null)
     }
   }
@@ -127,8 +127,8 @@ export default function CreateArticleForm() {
       <div className="flex flex-col">
         <label className="font-semibold mb-1">Texte :</label>
         <textarea
-          value={text}
-          onChange={(e) => setText(e.target.value)}
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
           className="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-400 text-black"
           rows={5}
           required
