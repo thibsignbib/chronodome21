@@ -111,15 +111,42 @@ export default function CreateArticleForm() {
       </div>
 
       <div className="flex flex-col">
-        <label className="font-semibold mb-1">Photo(s) :</label>
+  <label className="font-semibold mb-1">Photo(s) :</label>
+    <label
+        htmlFor="file-upload"
+        className="flex flex-col items-center justify-center w-full h-40 border-2 border-dashed border-amber-400 rounded-lg cursor-pointer hover:bg-amber-50 transition"
+    >
+        <div className="flex flex-col items-center justify-center pt-5 pb-6">
+        <svg
+            aria-hidden="true"
+            className="w-10 h-10 mb-3 text-amber-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M7 16V4m0 0L3 8m4-4l4 4M3 16h18"
+            ></path>
+        </svg>
+        <p className="mb-2 text-sm text-gray-500">Clique ici pour importer</p>
+        <p className="text-xs text-gray-400">PNG, JPG jusqu'à 10MB</p>
+        </div>
+
         <input
-          type="file"
-          multiple
-          accept="image/*"
-          onChange={(e) => setImages(e.target.files)}
-          className="p-3 border border-gray-300 rounded-lg focus:outline-none"
+        id="file-upload"
+        type="file"
+        multiple
+        accept="image/*"
+        onChange={(e) => setImages(e.target.files)}
+        className="hidden"
         />
-      </div>
+    </label>
+    </div>
+
 
       <button
         type="submit"
