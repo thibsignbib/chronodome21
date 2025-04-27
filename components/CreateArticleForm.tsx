@@ -22,8 +22,9 @@ const articleTypes = [
           <div className="flex-1 flex flex-col gap-2">
             <div className="h-4 bg-gray-300 rounded"></div>
             <div className="h-4 bg-gray-300 rounded"></div>
+            <div className="h-4 bg-gray-300 rounded w-2/3"></div>
           </div>
-          <div className="w-8 bg-gray-500 rounded"></div>
+          <div className="w-8 h-[70px] bg-gray-500 rounded"></div>
         </div>
       )
     },
@@ -33,7 +34,7 @@ const articleTypes = [
         mockup: (
           <div className="w-20 h-28 flex flex-col gap-2">
             <div className="h-4 bg-gray-300 rounded"></div>
-            <div className="h-4 bg-gray-300 rounded"></div>
+            <div className="h-4 bg-gray-300 rounded w-2/3"></div>
             <div className="flex gap-1 mt-2">
               <div className="flex-1 h-8 bg-gray-500 rounded"></div>
               <div className="flex-1 h-8 bg-gray-500 rounded"></div>
@@ -58,7 +59,7 @@ export default function CreateArticleForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-4">Créer un nouvel article 🍫</h2>
+      <h2 className="text-2xl font-bold mb-4">Créer un nouvel article</h2>
 
       <div className="space-y-2">
         <p className="font-semibold">Type d'article :</p>
