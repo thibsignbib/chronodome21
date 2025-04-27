@@ -13,7 +13,7 @@ export default async function NutellaAdminPage() {
   }
 
   return (
-    <div className="relative p-4 min-h-screen bg-gradient-to-br from-pink-100 to-amber-100">
+    <div className="relative p-4 min-h-screen">
       <LogoutButton />
       <div className="max-w-2xl mx-auto text-center mt-12">
         <h1 className="text-4xl font-extrabold text-amber-700 mb-4">
