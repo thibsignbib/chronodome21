@@ -13,10 +13,16 @@ export default async function NutellaAdminPage() {
   }
 
   return (
-    <div className="relative p-4 min-h-screen">
+    <div className="relative p-4 min-h-screen bg-gradient-to-br from-pink-100 to-amber-100">
       <LogoutButton />
-      <h1 className="text-2xl mb-4">Bienvenue sur Nutella Admin 🍫</h1>
-      <p>Ici tu pourras créer des articles !</p>
+      <div className="max-w-2xl mx-auto text-center mt-12">
+        <h1 className="text-4xl font-extrabold text-amber-700 mb-4">
+          Bienvenue sur l'interface admin du site Chronodôme 21!
+        </h1>
+        <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+          Ici tu peux écrire un nouvel article de news ou éditer les précédents !
+        </p>
+      </div>
       <CreateArticleForm />
     </div>
   )
