@@ -64,7 +64,7 @@ export default function CreateArticleForm() {
         {
           type,
           title,
-          text,
+          content,
           images: [], // on ajoutera l'upload plus tard
         },
       ])
