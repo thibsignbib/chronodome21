@@ -63,11 +63,11 @@ export default function CreateArticleForm() {
 
       <div className="space-y-2">
         <p className="font-semibold">Type d'article :</p>
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="grid grid-cols-3 gap-4">
           {articleTypes.map((option) => (
             <label
               key={option.id}
-              className={`flex flex-col items-center justify-center p-4 border rounded-lg cursor-pointer transition basis-1/3 ${
+              className={`flex flex-col items-center justify-center p-4 border rounded-lg cursor-pointer transition ${
                 type === option.id ? 'border-amber-500 bg-amber-100' : 'border-gray-300'
               }`}
             >
@@ -79,13 +79,12 @@ export default function CreateArticleForm() {
                 onChange={(e) => setType(e.target.value)}
                 className="hidden"
               />
-              <div className="mb-2">
-                {option.mockup}
-              </div>
+              <div className="mb-2">{option.mockup}</div>
               <span className="text-sm text-center">{option.label}</span>
             </label>
           ))}
         </div>
+
       </div>
 
       <div className="flex flex-col">
