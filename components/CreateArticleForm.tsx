@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Upload } from 'lucide-react'
+import { useSupabaseClient } from '@supabase/auth-helpers-react'
 
 const articleTypes = [
     { 
@@ -51,11 +52,35 @@ export default function CreateArticleForm() {
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
   const [images, setImages] = useState<FileList | null>(null)
+  const supabase = useSupabaseClient()
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Traitement de l'upload ici
-    console.log({ type, title, content, images })
+
+    // Ici, on suppose que images sera traité plus tard
+    const { data, error } = await supabase
+      .from('news')
+      .insert([
+        {
+          type,
+          title,
+          content,
+          images: [], // on ajoutera l'upload plus tard
+        },
+      ])
+
+    if (error) {
+      console.error('Erreur lors de la création de l\'article', error)
+      alert('Erreur lors de la création de l\'article')
+    } else {
+      console.log('Article créé', data)
+      alert('Article publié avec succès ! 🎉')
+      // Reset du formulaire
+      setType('text')
+      setTitle('')
+      setContent('')
+      setImages(null)
+    }
   }
 
   return (
