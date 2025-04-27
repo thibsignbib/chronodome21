@@ -63,29 +63,29 @@ export default function CreateArticleForm() {
 
       <div className="space-y-2">
         <p className="font-semibold">Type d'article :</p>
-        <div className="flex gap-4 flex-wrap justify-center">
-            {articleTypes.map((option) => (
-                <label
-                key={option.id}
-                className={`flex flex-col items-center justify-center p-4 border rounded-lg cursor-pointer transition ${
-                    type === option.id ? 'border-amber-500 bg-amber-100' : 'border-gray-300'
-                }`}
-                >
-                <input
-                    type="radio"
-                    name="articleType"
-                    value={option.id}
-                    checked={type === option.id}
-                    onChange={(e) => setType(e.target.value)}
-                    className="hidden"
-                />
-                <div className="mb-2">
-                    {option.mockup}
-                </div>
-                <span className="text-sm">{option.label}</span>
-                </label>
-            ))}
-            </div>
+        <div className="flex flex-wrap justify-center gap-4">
+          {articleTypes.map((option) => (
+            <label
+              key={option.id}
+              className={`flex flex-col items-center justify-center p-4 border rounded-lg cursor-pointer transition basis-1/3 ${
+                type === option.id ? 'border-amber-500 bg-amber-100' : 'border-gray-300'
+              }`}
+            >
+              <input
+                type="radio"
+                name="articleType"
+                value={option.id}
+                checked={type === option.id}
+                onChange={(e) => setType(e.target.value)}
+                className="hidden"
+              />
+              <div className="mb-2">
+                {option.mockup}
+              </div>
+              <span className="text-sm text-center">{option.label}</span>
+            </label>
+          ))}
+        </div>
       </div>
 
       <div className="flex flex-col">
