@@ -52,12 +52,58 @@ export default function CreateArticleForm() {
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
   const [images, setImages] = useState<FileList | null>(null)
+  const [previewUrls, setPreviewUrls] = useState<string[]>([])
   const supabase = useSupabaseClient()
+  
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files
+    if (files && files.length > 0) {
+      if (files.length > 10) {
+        alert('Tu ne peux pas uploader plus de 10 images.')
+        return
+      }
+      setImages(files)
+
+      // Créer des previews locales
+      const urls = Array.from(files).map((file) => URL.createObjectURL(file))
+      setPreviewUrls(urls)
+    }
+  }
+
+  const uploadImages = async () => {
+    if (!images) return []
+
+    const uploadedUrls: string[] = []
+
+    for (const file of Array.from(images)) {
+      const filename = `${Date.now()}_${file.name}`
+      const { data, error } = await supabase.storage
+        .from('news-images')
+        .upload(filename, file)
+
+      if (error) {
+        console.error('Erreur upload image :', error)
+        continue
+      }
+
+      const { data: publicUrlData } = supabase
+        .storage
+        .from('news-images')
+        .getPublicUrl(filename)
+
+      if (publicUrlData?.publicUrl) {
+        uploadedUrls.push(publicUrlData.publicUrl)
+      }
+    }
+
+    return uploadedUrls
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    // Ici, on suppose que images sera traité plus tard
+    const uploadedImageUrls = await uploadImages()
+
     const { data, error } = await supabase
       .from('news')
       .insert([
@@ -65,7 +111,7 @@ export default function CreateArticleForm() {
           type,
           title,
           content,
-          images: [], // on ajoutera l'upload plus tard
+          images: uploadedImageUrls,
         },
       ])
 
@@ -152,10 +198,24 @@ export default function CreateArticleForm() {
         type="file"
         multiple
         accept="image/*"
-        onChange={(e) => setImages(e.target.files)}
+        onChange={handleImageChange}
         className="hidden"
         />
     </label>
+
+    {/* Preview miniatures */}
+    {previewUrls.length > 0 && (
+        <div className="grid grid-cols-3 gap-2 mt-4">
+          {previewUrls.map((url, index) => (
+            <img
+              key={index}
+              src={url}
+              alt={`Preview ${index}`}
+              className="object-cover w-full h-32 rounded-lg"
+            />
+          ))}
+        </div>
+      )}
     </div>
 
 
