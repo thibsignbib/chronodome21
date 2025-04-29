@@ -65,8 +65,8 @@ export default function CreateArticleForm() {
       setImages(files)
 
       // Créer des previews locales
-      const urls = Array.from(files).map((file) => URL.createObjectURL(file))
-      setPreviewUrls(urls)
+      const newUrls = Array.from(files).map((file) => URL.createObjectURL(file))
+      setPreviewUrls((prevUrls) => [...prevUrls, ...newUrls])
     }
   }
 
