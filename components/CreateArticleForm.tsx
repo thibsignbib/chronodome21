@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Upload } from 'lucide-react'
+import { Upload, Image } from 'lucide-react'
 import { useSupabaseClient } from '@supabase/auth-helpers-react'
 import { toast } from 'react-hot-toast'
 
@@ -39,9 +39,15 @@ const articleTypes = [
             <div className="h-4 bg-gray-300 rounded"></div>
             <div className="h-4 bg-gray-300 rounded w-2/3"></div>
             <div className="flex gap-1 mt-2">
-              <div className="flex-1 h-8 bg-gray-500 rounded"></div>
-              <div className="flex-1 h-8 bg-gray-500 rounded"></div>
-              <div className="flex-1 h-8 bg-gray-500 rounded"></div>
+            <div className="flex-1 h-8 rounded border border-black bg-white flex items-center justify-center">
+              <Image className="w-4 h-4 text-black opacity-60" />
+            </div>
+            <div className="flex-1 h-8 rounded border border-black bg-white flex items-center justify-center">
+              <Image className="w-4 h-4 text-black opacity-60" />
+            </div>
+            <div className="flex-1 h-8 rounded border border-black bg-white flex items-center justify-center">
+              <Image className="w-4 h-4 text-black opacity-60" />
+            </div>
             </div>
           </div>
         )
@@ -201,7 +207,7 @@ export default function CreateArticleForm() {
         />
       </div>
 
-      {type === 'text' ? <div className="flex flex-col">
+      {type === 'text' ? '' : <div className="flex flex-col">
   <label className="font-semibold mb-1">Photo(s) :</label>
     <label
         htmlFor="file-upload"
@@ -236,7 +242,7 @@ export default function CreateArticleForm() {
           ))}
         </div>
       )}
-    </div>:''}
+    </div>}
 
 
       <button
