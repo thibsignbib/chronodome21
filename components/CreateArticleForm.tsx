@@ -76,13 +76,21 @@ export default function CreateArticleForm() {
       toast.error("Tu ne peux pas uploader plus de 10 images.")
       return
     }
-  
-    setImages(files)
 
     const newUrls = Array.from(files).map((file) => URL.createObjectURL(file))
     if(type === 'text-image-side'){
+      setImages(files)
       setPreviewUrls(newUrls)
     }else{
+
+      setImages((prev) => {
+        if (!prev) return files
+        const combined = new DataTransfer()
+        Array.from(prev).forEach((file) => combined.items.add(file))
+        Array.from(files).forEach((file) => combined.items.add(file))
+        return combined.files
+      })
+
       setPreviewUrls((prevUrls) => [...prevUrls, ...newUrls])
     }
     
