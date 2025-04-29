@@ -126,6 +126,8 @@ export default function CreateArticleForm() {
       setTitle('')
       setContent('')
       setImages(null)
+      previewUrls.forEach((url) => URL.revokeObjectURL(url))
+      setPreviewUrls([])
     }
   }
 
