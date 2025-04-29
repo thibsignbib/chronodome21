@@ -1,7 +1,7 @@
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
-import LogoutButton from '@/components/LogoutButton'
+import LogoutButtonClientWrapper from '@/components/LogoutButtonClientWrapper'
 import CreateArticleForm from '@/components/CreateArticleForm'
 
 export default async function NutellaAdminPage() {
@@ -14,7 +14,7 @@ export default async function NutellaAdminPage() {
 
   return (
     <div className="relative p-4 min-h-screen bg-white text-black">
-      <LogoutButton />
+      <LogoutButtonClientWrapper />
       <div className="max-w-2xl mx-auto text-center mt-12">
         <h1 className="text-4xl font-extrabold text-amber-700 mb-4">
           Interface admin Chronodôme
