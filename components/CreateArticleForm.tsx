@@ -5,8 +5,6 @@ import { Upload } from 'lucide-react'
 import { useSupabaseClient } from '@supabase/auth-helpers-react'
 import { toast } from 'react-hot-toast'
 
-const [isSubmitting, setIsSubmitting] = useState(false)
-
 const articleTypes = [
     { 
       id: 'text', 
@@ -57,6 +55,7 @@ export default function CreateArticleForm() {
   const [images, setImages] = useState<FileList | null>(null)
   const [previewUrls, setPreviewUrls] = useState<string[]>([])
   const supabase = useSupabaseClient()
+  const [isSubmitting, setIsSubmitting] = useState(false)
   
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files
