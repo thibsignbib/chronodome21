@@ -5,6 +5,8 @@ import { Upload } from 'lucide-react'
 import { useSupabaseClient } from '@supabase/auth-helpers-react'
 import { toast } from 'react-hot-toast'
 
+const [isSubmitting, setIsSubmitting] = useState(false)
+
 const articleTypes = [
     { 
       id: 'text', 
@@ -102,6 +104,8 @@ export default function CreateArticleForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setIsSubmitting(true)
+    
 
     const uploadedImageUrls = await uploadImages()
 
@@ -130,6 +134,8 @@ export default function CreateArticleForm() {
       previewUrls.forEach((url) => URL.revokeObjectURL(url))
       setPreviewUrls([])
     }
+
+    setIsSubmitting(false)
   }
 
   return (
@@ -224,9 +230,14 @@ export default function CreateArticleForm() {
 
       <button
         type="submit"
-        className="p-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-lg transition duration-200 cursor-pointer"
+        disabled={isSubmitting}
+        className={`p-3 w-full font-semibold rounded-lg transition duration-200 cursor-pointer ${
+          isSubmitting
+            ? 'bg-gray-300 text-gray-600 cursor-not-allowed'
+            : 'bg-amber-500 hover:bg-amber-600 text-white'
+        }`}
       >
-        Publier l'article
+        {isSubmitting ? 'Publication en cours...' : 'Publier l\'article'}
       </button>
     </form>
   )
