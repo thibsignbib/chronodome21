@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Upload } from 'lucide-react'
 import { useSupabaseClient } from '@supabase/auth-helpers-react'
+import { toast } from 'react-hot-toast'
 
 const articleTypes = [
     { 
@@ -117,10 +118,10 @@ export default function CreateArticleForm() {
 
     if (error) {
       console.error('Erreur lors de la création de l\'article', error)
-      alert('Erreur lors de la création de l\'article')
+      toast.error("Erreur lors de la création de l\'article")
     } else {
       console.log('Article créé', data)
-      alert('Article publié avec succès ! 🎉')
+      toast.success("Article publié avec succès ! 🎉")
       // Reset du formulaire
       setType('text')
       setTitle('')
