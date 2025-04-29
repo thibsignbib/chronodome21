@@ -201,7 +201,7 @@ export default function CreateArticleForm() {
         />
       </div>
 
-      <div className="flex flex-col">
+      {type === 'text' ? <div className="flex flex-col">
   <label className="font-semibold mb-1">Photo(s) :</label>
     <label
         htmlFor="file-upload"
@@ -236,7 +236,7 @@ export default function CreateArticleForm() {
           ))}
         </div>
       )}
-    </div>
+    </div>:''}
 
 
       <button
