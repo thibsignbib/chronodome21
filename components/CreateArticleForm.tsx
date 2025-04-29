@@ -80,7 +80,11 @@ export default function CreateArticleForm() {
     setImages(files)
 
     const newUrls = Array.from(files).map((file) => URL.createObjectURL(file))
-    setPreviewUrls((prevUrls) => [...prevUrls, ...newUrls])
+    if(type === 'text-image-side'){
+      setPreviewUrls(newUrls)
+    }else{
+      setPreviewUrls((prevUrls) => [...prevUrls, ...newUrls])
+    }
     
   }
 
