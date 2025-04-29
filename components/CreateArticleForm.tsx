@@ -59,17 +59,29 @@ export default function CreateArticleForm() {
   
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files
-    if (files && files.length > 0) {
-      if (files.length > 10) {
-        alert('Tu ne peux pas uploader plus de 10 images.')
-        return
-      }
-      setImages(files)
+    
+    if (!files) return
 
-      // Créer des previews locales
-      const newUrls = Array.from(files).map((file) => URL.createObjectURL(file))
-      setPreviewUrls((prevUrls) => [...prevUrls, ...newUrls])
+    if (type === 'text') {
+      // Aucun upload autorisé
+      return
     }
+  
+    if (type === 'text-image-side' && files.length > 1) {
+      toast.error("Tu ne peux uploader qu\'UNE seule image pour ce type d'article.")
+      return
+    }
+  
+    if (type === 'text-image-bottom' && files.length > 10) {
+      toast.error("Tu ne peux pas uploader plus de 10 images.")
+      return
+    }
+  
+    setImages(files)
+
+    const newUrls = Array.from(files).map((file) => URL.createObjectURL(file))
+    setPreviewUrls((prevUrls) => [...prevUrls, ...newUrls])
+    
   }
 
   const uploadImages = async () => {
