@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Upload } from 'lucide-react'
+import { Upload, X } from 'lucide-react'
 import { useSupabaseClient } from '@supabase/auth-helpers-react'
 import { toast } from 'react-hot-toast'
 
@@ -56,6 +56,20 @@ export default function CreateArticleForm() {
   const [previewUrls, setPreviewUrls] = useState<string[]>([])
   const supabase = useSupabaseClient()
   const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const removeImage = (indexToRemove: number) => {
+    // Supprimer l'image de preview
+    setPreviewUrls((prev) => prev.filter((_, i) => i !== indexToRemove))
+  
+    // Supprimer le fichier correspondant
+    if (images) {
+      const dt = new DataTransfer()
+      Array.from(images)
+        .filter((_, i) => i !== indexToRemove)
+        .forEach((file) => dt.items.add(file))
+      setImages(dt.files)
+    }
+  }
   
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files
@@ -235,18 +249,26 @@ export default function CreateArticleForm() {
         />
     </label>
 
-    {/* Preview miniatures */}
     {previewUrls.length > 0 && (
-        <div className="grid grid-cols-3 gap-2 mt-4">
-          {previewUrls.map((url, index) => (
+      <div className="grid grid-cols-3 gap-2 mt-4">
+        {previewUrls.map((url, index) => (
+          <div key={index} className="relative group">
             <img
-              key={index}
               src={url}
               alt={`Preview ${index}`}
-              className="object-cover w-full h-32 rounded-lg"
+              className="object-cover w-full h-32 rounded-lg border border-gray-300"
             />
-          ))}
-        </div>
+            <button
+              type="button"
+              onClick={() => removeImage(index)}
+              className="absolute top-1 right-1 bg-white text-black rounded-full p-1 shadow hover:bg-red-500 hover:text-white transition-opacity opacity-0 group-hover:opacity-100"
+              aria-label="Supprimer l’image"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+        ))}
+      </div>
       )}
     </div>}
 
