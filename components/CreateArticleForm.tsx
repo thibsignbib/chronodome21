@@ -141,6 +141,17 @@ export default function CreateArticleForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+
+    if (!title.trim() || !content.trim()) {
+      toast.error("Titre et contenu sont obligatoires.")
+      return
+    }
+  
+    if (type !== 'text' && (!images || images.length === 0)) {
+      toast.error("Tu dois ajouter au moins une image pour ce type d'article.")
+      return
+    }
+
     setIsSubmitting(true)
     
 
