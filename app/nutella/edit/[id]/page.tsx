@@ -3,7 +3,11 @@ import { cookies } from 'next/headers'
 import { notFound } from 'next/navigation'
 import EditArticleForm from '@/components/EditArticleForm'
 
-export default async function Page({ params }: { params: { id: string } }) {
+type Props = {
+    params: { id: string }
+  }
+  
+  export default async function EditPage({ params }: Props) {
   const supabase = createServerComponentClient({ cookies })
   const { data: article } = await supabase
     .from('news')
