@@ -4,6 +4,7 @@ import { redirect } from 'next/navigation'
 import LogoutButtonClientWrapper from '@/components/LogoutButtonClientWrapper'
 import CreateArticleFormClientWrapper from '@/components/CreateArticleFormClientWrapper'
 import AccordionSection from '@/components/AccordionSection'
+import ArticleList from '@/components/ArticleList'
 
 export default async function NutellaAdminPage() {
   const supabase = createServerComponentClient({ cookies })
@@ -29,9 +30,7 @@ export default async function NutellaAdminPage() {
         </AccordionSection>
 
         <AccordionSection title="Modifier un article existant">
-          <div className="text-gray-500 italic">
-            (À venir : ici s’afficheront les articles récents pour les modifier 🔧)
-          </div>
+          <ArticleList />
         </AccordionSection>
     </div>
   )
