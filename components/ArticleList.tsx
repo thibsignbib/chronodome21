@@ -6,9 +6,8 @@ import { toast } from 'react-hot-toast'
 
 type Article = {
   id: number
-  title: string
   created_at: string
-  type: string
+  title: string
 }
 
 export default function ArticleList() {
@@ -20,7 +19,7 @@ export default function ArticleList() {
     const fetchArticles = async () => {
       const { data, error } = await supabase
         .from('news')
-        .select('id, title, created_at, type')
+        .select('*')
         .order('created_at', { ascending: false })
 
       if (error) {
@@ -51,7 +50,7 @@ export default function ArticleList() {
             <div>
               <h3 className="text-lg font-semibold text-amber-700">{article.title}</h3>
               <p className="text-sm text-gray-500">
-                {new Date(article.created_at).toLocaleDateString('fr-FR')} — Type : {article.type}
+                {new Date(article.created_at).toLocaleDateString('fr-FR')}
               </p>
             </div>
             <button
