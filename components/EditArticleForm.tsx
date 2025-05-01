@@ -193,21 +193,24 @@ export default function EditArticleForm({ article }: { article: any }) {
                   >
                     <X className="w-4 h-4" />
                   </button>
-
-                  <button
-                    type="button"
-                    onClick={handleDelete}
-                    className="w-full p-3 rounded-lg border border-red-500 text-red-500 hover:bg-red-50 transition duration-200"
-                    >
-                    Supprimer l’article
-                    </button>
-
                 </div>
               ))}
             </div>
           )}
         </div>
       )}
+      
+        <button
+            type="submit"
+            disabled={isSubmitting}
+            className={`w-full p-3 rounded-lg font-semibold transition ${
+            isSubmitting
+                ? 'bg-gray-300 text-gray-600 cursor-not-allowed'
+                : 'bg-amber-500 hover:bg-amber-600 text-white'
+            }`}
+        >
+            {isSubmitting ? 'Mise à jour en cours...' : 'Mettre à jour l’article'}
+        </button>
 
         <button
             type="button"
