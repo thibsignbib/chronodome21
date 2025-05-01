@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Upload, X } from 'lucide-react'
 import { useSupabaseClient } from '@supabase/auth-helpers-react'
 import { toast } from 'react-hot-toast'
+import { useRouter } from 'next/navigation'
 
 
 const articleTypes = [
@@ -19,7 +20,9 @@ export default function EditArticleForm({ article }: { article: any }) {
   const [images, setImages] = useState<FileList | null>(null)
   const [previewUrls, setPreviewUrls] = useState<string[]>(article.images || [])
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isDeleting, setIsDeleting] = useState(false)
   const supabase = useSupabaseClient()
+  const router = useRouter()
 
   const removeImage = (index: number) => {
     setPreviewUrls((prev) => prev.filter((_, i) => i !== index))
@@ -98,6 +101,31 @@ export default function EditArticleForm({ article }: { article: any }) {
     setIsSubmitting(false)
   }
 
+
+
+  const handleDelete = async () => {
+    const confirmed = window.confirm("Es-tu sûr de vouloir supprimer cet article ? 😬")
+    if (!confirmed) return
+  
+    setIsDeleting(true)
+  
+    const { error } = await supabase
+      .from('news')
+      .delete()
+      .eq('id', article.id)
+  
+    if (error) {
+      console.error("Erreur suppression :", error)
+      toast.error("Erreur lors de la suppression de l’article")
+      setIsDeleting(false)
+      return
+    }
+  
+    toast.success("Article supprimé ✅")
+    router.push('/nutella')
+  }
+
+
   return (
     <form onSubmit={handleUpdate} className="space-y-6">
       <div>
@@ -165,6 +193,15 @@ export default function EditArticleForm({ article }: { article: any }) {
                   >
                     <X className="w-4 h-4" />
                   </button>
+
+                  <button
+                    type="button"
+                    onClick={handleDelete}
+                    className="w-full p-3 rounded-lg border border-red-500 text-red-500 hover:bg-red-50 transition duration-200"
+                    >
+                    Supprimer l’article
+                    </button>
+
                 </div>
               ))}
             </div>
@@ -172,17 +209,19 @@ export default function EditArticleForm({ article }: { article: any }) {
         </div>
       )}
 
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className={`w-full p-3 rounded-lg font-semibold transition ${
-          isSubmitting
-            ? 'bg-gray-300 text-gray-600 cursor-not-allowed'
-            : 'bg-amber-500 hover:bg-amber-600 text-white'
-        }`}
-      >
-        {isSubmitting ? 'Mise à jour en cours...' : 'Mettre à jour l’article'}
-      </button>
+        <button
+            type="button"
+            onClick={handleDelete}
+            disabled={isDeleting}
+            className={`w-full p-3 rounded-lg font-semibold border transition duration-200 ${
+                isDeleting
+                ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                : 'border-red-500 text-red-500 hover:bg-red-50'
+            }`}
+            >
+            {isDeleting ? 'Suppression en cours...' : 'Supprimer l’article'}
+        </button>
+
     </form>
   )
 }
