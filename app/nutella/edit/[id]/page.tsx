@@ -3,16 +3,16 @@ import { cookies } from 'next/headers'
 import { notFound } from 'next/navigation'
 import EditArticleForm from '@/components/EditArticleForm'
 
-export default async function EditPage({
-  params,
-}: {
-  params: { id: string }
+export default async function EditPage(props: {
+  params: Promise<{ id: string }>
 }) {
+  const { id } = await props.params
+
   const supabase = createServerComponentClient({ cookies })
   const { data: article } = await supabase
     .from('news')
     .select('*')
-    .eq('id', params.id)
+    .eq('id', id)
     .single()
 
   if (!article) notFound()
