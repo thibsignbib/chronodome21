@@ -1,9 +1,10 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Upload, X } from 'lucide-react'
 import { useSupabaseClient } from '@supabase/auth-helpers-react'
 import { toast } from 'react-hot-toast'
+
 
 const articleTypes = [
   { id: 'text', label: 'Texte seul' },
