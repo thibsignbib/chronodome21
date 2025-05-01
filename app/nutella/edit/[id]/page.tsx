@@ -8,7 +8,11 @@ type Props = {
   params: { id: string }
 }
 
-export default async function EditArticlePage({ params }: Props) {
+export default async function Page({
+    params,
+  }: {
+    params: { id: string }
+  }) {
   const supabase = createServerComponentClient({ cookies })
   const { data: article } = await supabase
     .from('news')
