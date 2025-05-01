@@ -54,12 +54,9 @@ export default function ArticleList() {
                 {new Date(article.created_at).toLocaleDateString('fr-FR')}
               </p>
             </div>
-            <button
-              className="text-sm text-blue-600 hover:underline"
-              onClick={() => toast('Fonctionnalité de modification à venir')}
-            >
+            <a href={`/nutella/edit/${article.id}`} className="text-sm text-blue-600 hover:underline">
               Modifier
-            </button>
+            </a>
           </div>
         </li>
       ))}
