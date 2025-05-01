@@ -3,6 +3,7 @@ import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import LogoutButtonClientWrapper from '@/components/LogoutButtonClientWrapper'
 import CreateArticleFormClientWrapper from '@/components/CreateArticleFormClientWrapper'
+import AccordionSection from '@/components/AccordionSection'
 
 export default async function NutellaAdminPage() {
   const supabase = createServerComponentClient({ cookies })
@@ -23,7 +24,15 @@ export default async function NutellaAdminPage() {
           Ici tu peux écrire un nouvel article de news ou éditer les précédents !
         </p>
       </div>
-      <CreateArticleFormClientWrapper />
+        <AccordionSection title="Créer un nouvel article" defaultOpen={true}>
+          <CreateArticleFormClientWrapper />
+        </AccordionSection>
+
+        <AccordionSection title="Modifier un article existant">
+          <div className="text-gray-500 italic">
+            (À venir : ici s’afficheront les articles récents pour les modifier 🔧)
+          </div>
+        </AccordionSection>
     </div>
   )
 }

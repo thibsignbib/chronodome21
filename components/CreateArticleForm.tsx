@@ -188,8 +188,6 @@ export default function CreateArticleForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-4">Créer un nouvel article</h2>
-
       <div className="space-y-2">
         <p className="font-semibold">Type d'article :</p>
         <div className="grid grid-cols-3 gap-4">
