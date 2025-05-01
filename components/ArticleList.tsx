@@ -27,6 +27,7 @@ export default function ArticleList() {
         toast.error("Erreur lors du chargement des articles")
       } else {
         setArticles(data)
+        console.log(data)
       }
       setLoading(false)
     }
