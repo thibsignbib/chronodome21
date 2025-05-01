@@ -2,17 +2,8 @@ import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { cookies } from 'next/headers'
 import { notFound } from 'next/navigation'
 import EditArticleForm from '@/components/EditArticleForm'
-import { Metadata } from 'next'
 
-type Props = {
-  params: { id: string }
-}
-
-export default async function Page({
-    params,
-  }: {
-    params: { id: string }
-  }) {
+export default async function Page({ params }: { params: { id: string } }) {
   const supabase = createServerComponentClient({ cookies })
   const { data: article } = await supabase
     .from('news')
