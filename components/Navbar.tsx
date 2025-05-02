@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import styles from '@/app/page.module.css';
 import { FaInstagram, FaBars  } from 'react-icons/fa';
-import { LuLightbulb, LuCamera, LuEuro, LuPlus, LuHeartHandshake   } from "react-icons/lu";
+import { LuLightbulb, LuCamera, LuEuro, LuPlus, LuHeartHandshake, LuNewspaper    } from "react-icons/lu";
 import { SiGithubsponsors } from "react-icons/si";
 import { usePathname } from 'next/navigation';
 
@@ -35,8 +35,8 @@ export default function Navbar({ darkBackground = false }: NavbarProps) {
                 <a href={getLinkHref('don')}>
                     <LuEuro /> Faire un don
                 </a>
-                <a href="https://www.instagram.com/semelle_o_monde/">
-                    <FaInstagram /> News
+                <a href="/news">
+                    <LuNewspaper /> News
                 </a>
                 <a href={getLinkHref('partenaires')}>
                     <SiGithubsponsors /> Partenaires
@@ -65,8 +65,8 @@ export default function Navbar({ darkBackground = false }: NavbarProps) {
                 <a href={getLinkHref('don')}>
                     <LuEuro /> Faire un don
                 </a>
-                <a href="https://www.instagram.com/semelle_o_monde/">
-                    <FaInstagram /> News
+                <a href="/news">
+                    <LuNewspaper /> News
                 </a>
                 <a href={getLinkHref('partenaires')}>
                     <SiGithubsponsors /> Partenaires
