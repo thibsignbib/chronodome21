@@ -102,22 +102,30 @@ export default function EditArticleForm({ article }: { article: any }) {
   }
 
   const uploadImages = async () => {
-    if (!images) return previewUrls
-
+    if (!images || images.length === 0) return previewUrls
+  
     const uploadedUrls: string[] = []
+  
     for (const file of Array.from(images)) {
       const filename = `${Date.now()}_${file.name}`
       const { error } = await supabase.storage.from('news-images').upload(filename, file)
+  
       if (error) {
         console.error('Erreur upload image :', error)
         continue
       }
-      const { data: publicUrlData } = supabase.storage.from('news-images').getPublicUrl(filename)
+  
+      const { data: publicUrlData } = supabase
+        .storage
+        .from('news-images')
+        .getPublicUrl(filename)
+  
       if (publicUrlData?.publicUrl) {
         uploadedUrls.push(publicUrlData.publicUrl)
       }
     }
-    return uploadedUrls
+  
+    return [...previewUrls, ...uploadedUrls] 
   }
 
   const handleUpdate = async (e: React.FormEvent) => {
