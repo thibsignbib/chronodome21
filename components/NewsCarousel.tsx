@@ -17,7 +17,7 @@ export default function NewsCarousel() {
         .from('news')
         .select('*')
         .order('created_at', { ascending: false })
-        .limit(6);
+        .limit(5);
 
       if (error) {
         toast.error("Erreur lors du chargement des articles");
@@ -71,7 +71,7 @@ export default function NewsCarousel() {
       <div className="text-center mt-6">
         <a
           href="/news"
-          className="inline-block text-gray-800 text-sm font-medium hover:underline"
+          className="inline-block text-gray-800 text-sm font-medium hover:underline mt-20"
         >
           Voir toutes les actualités →
         </a>
