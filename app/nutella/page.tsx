@@ -5,6 +5,7 @@ import LogoutButtonClientWrapper from '@/components/LogoutButtonClientWrapper'
 import CreateArticleFormClientWrapper from '@/components/CreateArticleFormClientWrapper'
 import AccordionSection from '@/components/AccordionSection'
 import ArticleList from '@/components/ArticleList'
+import { PlusCircle, Edit } from 'lucide-react'
 
 export default async function NutellaAdminPage() {
   const supabase = createServerComponentClient({ cookies })
@@ -25,13 +26,14 @@ export default async function NutellaAdminPage() {
           Ici tu peux écrire un nouvel article de news ou éditer les précédents !
         </p>
       </div>
-        <AccordionSection title="Créer un nouvel article" defaultOpen={true}>
-          <CreateArticleFormClientWrapper />
-        </AccordionSection>
 
-        <AccordionSection title="Modifier un article existant">
-          <ArticleList />
-        </AccordionSection>
+      <AccordionSection title="Créer un nouvel article" icon={<PlusCircle className="w-6 h-6" />}>
+        <CreateArticleFormClientWrapper />
+      </AccordionSection>
+
+      <AccordionSection title="Modifier un article existant" icon={<Edit className="w-6 h-6" />}>
+        <ArticleList />
+      </AccordionSection>
     </div>
   )
 }
