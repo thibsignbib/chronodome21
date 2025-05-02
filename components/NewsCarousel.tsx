@@ -33,7 +33,7 @@ export default function NewsCarousel() {
   if (loading || articles.length === 0) return null;
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -44,7 +44,7 @@ export default function NewsCarousel() {
   };
 
   return (
-    <div className="max-w-5xl mx-auto px-4 pb-10 w-1/2">
+    <div className="max-w-5xl mx-auto px-4 pb-10 w-full sm:w-4/5 lg:w-1/2">
       <Slider {...settings}>
         {articles.map((article) => (
           <div key={article.id} className="px-6">
@@ -71,7 +71,7 @@ export default function NewsCarousel() {
       <div className="text-center mt-6">
         <a
           href="/news"
-          className="inline-block text-amber-600 text-sm font-medium hover:underline"
+          className="inline-block text-gray-800 text-sm font-medium hover:underline"
         >
           Voir toutes les actualités →
         </a>
