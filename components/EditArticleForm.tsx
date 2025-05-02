@@ -109,7 +109,9 @@ export default function EditArticleForm({ article }: { article: any }) {
   }  
 
   const uploadImages = async () => {
-    if (!images || images.length === 0) return previewUrls
+    if (!images || images.length === 0) {
+      return previewUrls.filter((url) => !url.startsWith('blob:')) // garde seulement les vraies URLs
+    }
   
     const uploadedUrls: string[] = []
   
