@@ -5,7 +5,6 @@ import { useSupabaseClient } from '@supabase/auth-helpers-react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import '@/app/styles/carousel.css'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 
 export default function NewsCarousel() {
