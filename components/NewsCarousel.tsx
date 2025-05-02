@@ -71,7 +71,7 @@ export default function NewsCarousel() {
       <div className="text-center mt-6">
         <a
           href="/news"
-          className="inline-block text-gray-800 text-sm font-medium hover:underline mt-20"
+          className="inline-block text-gray-800 text-sm font-medium hover:underline mt-[20px]"
         >
           Voir toutes les actualités →
         </a>
