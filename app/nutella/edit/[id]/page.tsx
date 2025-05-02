@@ -22,7 +22,7 @@ export default async function EditPage(props: {
     <div className="max-w-2xl mx-auto p-6 bg-white min-h-screen">
       <a
         href="/nutella"
-        className="inline-flex items-center gap-2 text-sm text-gray-700 hover:text-amber-600 transition font-medium mb-4"
+        className="inline-flex items-center gap-2 text-sm text-gray-700 hover:text-amber-600 transition font-medium mb-4 no-underline focus:outline-none"
       >
         <ArrowLeft className="w-4 h-4" />
           Retour à l’interface admin
