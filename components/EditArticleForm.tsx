@@ -74,32 +74,39 @@ export default function EditArticleForm({ article }: { article: any }) {
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files
     if (!files) return
-
+  
     if (type === 'text') return
+  
     if (type === 'text-image-side' && files.length > 1) {
       toast.error("Tu ne peux uploader qu'une seule image pour ce type d'article.")
       return
     }
+  
     if (type === 'text-image-bottom' && files.length > 10) {
       toast.error("Tu ne peux pas uploader plus de 10 images.")
       return
     }
-
+  
     const newUrls = Array.from(files).map((file) => URL.createObjectURL(file))
+  
     if (type === 'text-image-side') {
       setImages(files)
+      // Remplace entièrement les previews
+      previewUrls.forEach((url) => URL.revokeObjectURL(url)) // Libère la mémoire
       setPreviewUrls(newUrls)
     } else {
-      setImages((prev) => {
-        if (!prev) return files
-        const combined = new DataTransfer()
-        Array.from(prev).forEach((file) => combined.items.add(file))
-        Array.from(files).forEach((file) => combined.items.add(file))
-        return combined.files
-      })
-      setPreviewUrls((prevUrls) => [...prevUrls, ...newUrls])
+      const dt = new DataTransfer()
+      if (images) {
+        Array.from(images).forEach((file) => dt.items.add(file))
+      }
+      Array.from(files).forEach((file) => dt.items.add(file))
+  
+      setImages(dt.files)
+  
+      // Combine seulement les URLs des nouveaux fichiers ajoutés
+      setPreviewUrls((prev) => [...prev, ...newUrls])
     }
-  }
+  }  
 
   const uploadImages = async () => {
     if (!images || images.length === 0) return previewUrls
