@@ -55,14 +55,20 @@ export default function ArticleDetailPage() {
           <p className="text-sm text-gray-500 mb-6">Publié le {formattedDate}</p>
 
           {type === 'text-image-side' && images?.[0] ? (
-            <div className="flex flex-col md:flex-row gap-6 mb-6">
-              <div className="md:w-2/3 text-justify text-gray-800">{content}</div>
+            <div className="flex flex-col md:flex-row gap-6 items-start">
+            <div className="w-full md:w-2/3">
+              <p className="text-gray-700 text-justify text-left whitespace-pre-line">
+                {article.content}
+              </p>
+            </div>
+            <div className="w-full md:w-1/3">
               <img
-                src={images[0]}
-                alt="illustration"
-                className="w-full h-full object-contain shadow"
+                src={article.images?.[0] || '/siteicon.jpg'}
+                alt={article.title}
+                className="w-full h-auto object-contain rounded"
               />
             </div>
+          </div>
           ) : type === 'text-image-bottom' && images?.length > 0 ? (
             <>
               <p className="galleryIntro text-gray-800 mb-6">{content}</p>
