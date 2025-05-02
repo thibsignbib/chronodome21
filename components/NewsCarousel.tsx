@@ -51,7 +51,6 @@ export default function NewsCarousel() {
 
   return (
     <section className="max-w-3xl mx-auto py-10 px-4">
-      <h2 className="text-2xl font-bold text-center mb-4 text-amber-700">Dernières actualités</h2>
       <Slider {...settings}>
         {articles.map(article => (
           <div key={article.id} className="px-4">

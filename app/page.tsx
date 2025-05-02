@@ -35,11 +35,11 @@ export default function Home() {
           </a>
         </section>
           
-          <main>
-
-            <NewsCarousel />
-            
+          <main>           
             <section id="content" className={styles.contentSection}>
+
+            <h1>Les dernières news !</h1>
+            <NewsCarousel />
             
             <div id="concept" className={styles.contentRow}>
               <div className={styles.textBlock}>

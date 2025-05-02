@@ -19,7 +19,7 @@ export default async function EditPage(props: {
   if (!article) notFound()
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-white min-h-screen">
+    <div className="max-w-2xl mx-auto p-6 bg-white min-h-screen bg-white text-black">
       <a
         href="/nutella"
         className="inline-flex items-center gap-2 text-sm text-gray-700 hover:text-amber-600 transition font-medium mb-4 no-underline focus:outline-none"
