@@ -5,6 +5,7 @@ import styles from './page.module.css';
 import { FaPlus, FaEuroSign } from 'react-icons/fa';
 import { BsChevronDown } from 'react-icons/bs';
 import FlipdownTimer from '../components/FlipdownTimer';
+import NewsCarousel from '@/components/NewsCarousel';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -35,6 +36,9 @@ export default function Home() {
         </section>
           
           <main>
+
+            <NewsCarousel />
+            
             <section id="content" className={styles.contentSection}>
             
             <div id="concept" className={styles.contentRow}>
