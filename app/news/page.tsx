@@ -42,26 +42,32 @@ export default function NewsListPage() {
           <div className="space-y-6">
             {articles.map((article) => (
               <Link
-                href={`/news/${article.id}`}
-                key={article.id}
-                className="block bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden"
-              >
-                {article.images?.length > 0 && (
-                  <img
-                    src={article.images[0]}
-                    alt={article.title}
-                    className="w-full h-64 object-cover"
-                  />
-                )}
-                <div className="p-4">
-                  <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                    {article.title}
-                  </h2>
-                  <p className="text-gray-600 text-sm">
-                    {article.content?.slice(0, 200)}{article.content?.length > 200 && '...'}
-                  </p>
+              href={`/news/${article.id}`}
+              key={article.id}
+              className="flex flex-col sm:flex-row bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden group"
+            >
+              {article.images?.[0] ? (
+                <img
+                  src={article.images[0]}
+                  alt={article.title}
+                  className="w-full sm:w-48 h-48 object-cover sm:object-cover"
+                />
+              ) : (
+                <div className="w-full sm:w-48 h-48 bg-gray-200 flex items-center justify-center text-gray-400 text-sm">
+                  Aucune image
                 </div>
-              </Link>
+              )}
+            
+              <div className="flex-1 p-4">
+                <h2 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-amber-600 transition">
+                  {article.title}
+                </h2>
+                <p className="text-gray-600 text-sm">
+                  {article.content?.slice(0, 200)}
+                  {article.content?.length > 200 && '...'}
+                </p>
+              </div>
+            </Link>            
             ))}
           </div>
         )}
