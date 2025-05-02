@@ -1,15 +1,16 @@
-'use client';
+'use client'
 
-import { useEffect, useState } from 'react';
-import Slider from 'react-slick';
-import { useSupabaseClient } from '@supabase/auth-helpers-react';
-import { toast } from 'react-hot-toast';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useEffect, useState } from 'react'
+import { useSupabaseClient } from '@supabase/auth-helpers-react'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import '@/app/styles/carousel.css'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 
 export default function NewsCarousel() {
-  const supabase = useSupabaseClient();
-  const [articles, setArticles] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
+  const supabase = useSupabaseClient()
+  const [articles, setArticles] = useState<any[]>([])
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -17,75 +18,83 @@ export default function NewsCarousel() {
         .from('news')
         .select('*')
         .order('created_at', { ascending: false })
-        .limit(6);
+        .limit(6)
 
-      if (error) {
-        toast.error("Erreur lors du chargement des articles");
-      } else {
-        setArticles(data || []);
+      if (!error && data) {
+        setArticles(data)
       }
-      setLoading(false);
-    };
+    }
 
-    fetchArticles();
-  }, [supabase]);
+    fetchArticles()
+  }, [supabase])
 
-  if (loading || articles.length === 0) return null;
+  const NextArrow = (props: any) => (
+    <div className="arrow next" onClick={props.onClick}>
+      <ArrowRight size={24} />
+    </div>
+  )
+
+  const PrevArrow = (props: any) => (
+    <div className="arrow prev" onClick={props.onClick}>
+      <ArrowLeft size={24} />
+    </div>
+  )
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    nextArrow: <CustomArrow direction="right" />,
-    prevArrow: <CustomArrow direction="left" />,
-  };
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+  }
+
+  if (!articles || articles.length === 0) return null
 
   return (
-    <div className="max-w-5xl mx-auto px-4 pb-10">
+    <div className="max-w-4xl mx-auto px-4 py-8">
       <Slider {...settings}>
         {articles.map((article) => (
-          <div key={article.id} className="px-6">
-            <a
-              href={`/news/${article.id}`}
-              className="block bg-white rounded-xl shadow hover:shadow-lg transition-transform hover:scale-[1.01] overflow-hidden"
-            >
+          <a
+            href={`/news/${article.id}`}
+            key={article.id}
+            className="block rounded-xl overflow-hidden shadow hover:shadow-lg transition bg-white"
+          >
+            {article.images?.length > 0 ? (
               <img
-                src={article.images?.[0] || '/siteicon.jpg'}
+                src={article.images[0]}
                 alt={article.title}
                 className="w-full h-64 object-cover"
               />
-              <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-800">{article.title}</h3>
-                <p className="text-sm text-amber-600 mt-2">→ Lire l’article</p>
-              </div>
-            </a>
-          </div>
+            ) : (
+              <img
+                src="/siteicon.jpg"
+                alt="Image par défaut"
+                className="w-full h-64 object-cover"
+              />
+            )}
+            <div className="p-4">
+              <h3 className="text-xl font-bold text-amber-600 mb-2">
+                {article.title}
+              </h3>
+              <p className="text-gray-700 text-sm">
+                {article.content?.slice(0, 200)}{article.content?.length > 200 && '...'}
+              </p>
+            </div>
+          </a>
         ))}
       </Slider>
 
-      <div className="text-center mt-6">
+      <div className="text-center mt-4">
         <a
           href="/news"
-          className="inline-block text-amber-600 text-sm font-medium hover:underline"
+          className="inline-block px-4 py-2 border border-black text-black rounded hover:bg-gray-100 transition"
         >
-          Voir toutes les actualités →
+          Voir toutes les actualités
         </a>
       </div>
     </div>
-  );
-}
-
-function CustomArrow({ direction, onClick }: { direction: 'left' | 'right'; onClick?: () => void }) {
-  const positionClass = direction === 'left' ? 'left-[-30px]' : 'right-[-30px]';
-  return (
-    <button
-      onClick={onClick}
-      className={`absolute top-1/2 transform -translate-y-1/2 z-10 ${positionClass} bg-white shadow p-2 rounded-full hover:bg-amber-100 transition hidden sm:block`}
-    >
-      {direction === 'left' ? <ChevronLeft className="w-5 h-5" /> : <ChevronRight className="w-5 h-5" />}
-    </button>
-  );
+  )
 }
