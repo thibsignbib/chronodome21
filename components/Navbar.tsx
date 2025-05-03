@@ -26,6 +26,9 @@ export default function Navbar({ darkBackground = false }: NavbarProps) {
       <>
         <nav className={navbarClass}>
             <div className={styles.desktopMenu}>
+                <a href="/" className={styles.logoLink}>
+                    <img src="/Logo.png" alt="Logo Chronodôme" className={styles.logoImage} />
+                </a>
                 <a href={getLinkHref('concept')}>
                     <LuLightbulb /> Concept
                 </a>
@@ -56,6 +59,9 @@ export default function Navbar({ darkBackground = false }: NavbarProps) {
 
         {menuOpen && (
             <div className={styles.mobileMenu}>
+                <a href="/" className={styles.logoLink}>
+                    <img src="/Logo.png" alt="Logo Chronodôme" className={styles.logoImage} />
+                </a>
                 <a href={getLinkHref('concept')}>
                     <LuLightbulb /> Concept
                 </a>

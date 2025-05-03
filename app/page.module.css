@@ -561,3 +561,16 @@
     flex-direction: column;
     justify-content: space-between;
   }
+
+  .logoLink {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    text-decoration: none;
+  }
+  
+  .logoImage {
+    height: 40px; /* ajuste selon ton design */
+    width: auto;
+  }
+  
