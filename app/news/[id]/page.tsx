@@ -34,7 +34,7 @@ export default function ArticleDetailPage() {
   }, [id, supabase]);
 
   if (loading) {
-    return <div className={styles.contentSectionGallery}><Navbar darkBackground /><p>Chargement...</p><Footer /></div>;
+    return <div><Navbar darkBackground /><div className="min-h-screen flex justify-center items-center"><p>Chargement en cours...</p></div><Footer /></div>;
   }
 
   if (!article) {
@@ -85,11 +85,6 @@ export default function ArticleDetailPage() {
           )}
         </div>
       </div>
-      if (!article) {
-      <div className="min-h-screen flex justify-center items-center">
-        <p>Chargement en cours...</p>
-      </div>
-      }
       <Footer />
     </div>
   );
