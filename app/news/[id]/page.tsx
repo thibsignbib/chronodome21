@@ -85,6 +85,11 @@ export default function ArticleDetailPage() {
           )}
         </div>
       </div>
+      if (!article) {
+      <div className="min-h-screen flex justify-center items-center">
+        <p>Chargement en cours...</p>
+      </div>
+      }
       <Footer />
     </div>
   );
