@@ -570,7 +570,8 @@
   }
   
   .logoImage {
-    height: 40px; /* ajuste selon ton design */
+    height: 60px;
     width: auto;
+    cursor: pointer;
   }
   
