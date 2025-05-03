@@ -72,70 +72,71 @@ export default function EditArticleForm({ article }: { article: any }) {
   }
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files
-    if (!files) return
+    const files = e.target.files;
+    if (!files) return;
   
-    if (type === 'text') return
+    if (type === 'text') return;
   
+    // Restrictions
     if (type === 'text-image-side' && files.length > 1) {
-      toast.error("Tu ne peux uploader qu'une seule image pour ce type d'article.")
-      return
+      toast.error("Tu ne peux uploader qu'une seule image pour ce type d'article.");
+      return;
     }
   
     if (type === 'text-image-bottom' && files.length > 10) {
-      toast.error("Tu ne peux pas uploader plus de 10 images.")
-      return
+      toast.error("Tu ne peux pas uploader plus de 10 images.");
+      return;
     }
   
-    const newUrls = Array.from(files).map((file) => URL.createObjectURL(file))
+    // Nettoyer anciens blobs
+    previewUrls.forEach((url) => {
+      if (url.startsWith('blob:')) URL.revokeObjectURL(url);
+    });
+  
+    const newUrls = Array.from(files).map((file) => URL.createObjectURL(file));
   
     if (type === 'text-image-side') {
-      setImages(files)
-      // Remplace entièrement les previews
-      previewUrls.forEach((url) => URL.revokeObjectURL(url)) // Libère la mémoire
-      setPreviewUrls(newUrls)
+      setImages(files);
+      setPreviewUrls(newUrls);
     } else {
-      const dt = new DataTransfer()
+      const dt = new DataTransfer();
       if (images) {
-        Array.from(images).forEach((file) => dt.items.add(file))
+        Array.from(images).forEach((file) => dt.items.add(file));
       }
-      Array.from(files).forEach((file) => dt.items.add(file))
-  
-      setImages(dt.files)
-  
-      // Combine seulement les URLs des nouveaux fichiers ajoutés
-      setPreviewUrls((prev) => [...prev, ...newUrls])
+      Array.from(files).forEach((file) => dt.items.add(file));
+      setImages(dt.files);
+      setPreviewUrls((prev) => [...prev.filter((url) => !url.startsWith('blob:')), ...newUrls]);
     }
-  }  
+  };
+  
 
   const uploadImages = async () => {
-    if (!images || images.length === 0) {
-      return previewUrls.filter((url) => !url.startsWith('blob:')) // garde seulement les vraies URLs
-    }
+    const existingUrls = previewUrls.filter((url) => !url.startsWith('blob:'));
+    if (!images || images.length === 0) return existingUrls;
   
-    const uploadedUrls: string[] = []
+    const uploadedUrls: string[] = [];
   
     for (const file of Array.from(images)) {
-      const filename = `${Date.now()}_${file.name}`
-      const { error } = await supabase.storage.from('news-images').upload(filename, file)
+      const filename = `${Date.now()}_${file.name}`;
+      const { error } = await supabase.storage.from('news-images').upload(filename, file);
   
       if (error) {
-        console.error('Erreur upload image :', error)
-        continue
+        console.error('Erreur upload image :', error);
+        continue;
       }
   
-      const { data: publicUrlData } = supabase
-        .storage
+      const { data: publicUrlData } = supabase.storage
         .from('news-images')
-        .getPublicUrl(filename)
+        .getPublicUrl(filename);
   
       if (publicUrlData?.publicUrl) {
-        uploadedUrls.push(publicUrlData.publicUrl)
+        uploadedUrls.push(publicUrlData.publicUrl);
       }
     }
   
-    return [...previewUrls, ...uploadedUrls] 
-  }
+    return [...existingUrls, ...uploadedUrls];
+  };
+  
 
   const handleUpdate = async (e: React.FormEvent) => {
     e.preventDefault()
